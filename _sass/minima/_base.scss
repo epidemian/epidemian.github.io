@@ -93,9 +93,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  // Libre Baskerville font has some really pretty ligatures. Too fancy for normal text, but totally acceptable for titles.
-  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  font-family: 'KievitPro-Bold', sans-serif;
 }
 
 

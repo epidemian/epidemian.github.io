@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+$base-font-family: 'Telex', sans-serif;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -41,6 +41,20 @@ $on-laptop:        800px !default;
 
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
+}
+
+@font-face {
+  font-family: 'Telex';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/Telex-Regular.woff2) format('woff2'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "KievitPro-Bold";
+  font-display: fallback;
+  src: url(/assets/fonts/KievitPro-Bold.woff2) format("woff2");
 }
 
 @font-face {
