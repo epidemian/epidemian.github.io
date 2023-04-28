@@ -1,9 +1,12 @@
-title: Demian Ferreiro
-email: your-email@example.com
+title: Site Name
+author: Demian Ferreiro
+# email: your-email@example.com
 description: >-
-  My personal blog. Topics revolve around programming, and anything i find interesting.
+  A blog i guess.
 baseurl: ""
 url: ""
+rss: RSS
+# show_excerpts: true
 twitter_username: epidemian
 github_username:  epidemian
 mastodon:

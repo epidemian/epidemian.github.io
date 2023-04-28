@@ -1,7 +1,6 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 ---
-Hi there!
+## 🚧 Site under construction 🚧
+
+In the meantime, you can [play snake](/snake) :)
