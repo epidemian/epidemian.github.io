@@ -39,10 +39,6 @@ $on-laptop:        800px !default;
   }
 }
 
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}
-
 @font-face {
   font-family: 'Libre Baskerville';
   font-style: normal;
