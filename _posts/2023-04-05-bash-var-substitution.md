@@ -1,7 +1,7 @@
 ---
 title: "Bash variable substitutions & less tricks"
 layout: post
-tags: TIL bash
+tags: TIL Bash
 ---
 
 It's always nice to learn a new trick that may ever so slightly improve the way we use our tools. Today i learned two such little tricks regarding the command-line.
