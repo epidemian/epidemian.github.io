@@ -9,9 +9,18 @@ dl, dd, ol, ul, figure {
 }
 
 html {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  --text-color:       #111;
+  --background-color: #fdfdfd;
+  --accent-color:     #2a7ae2;
+  --grey-color:       #828282;
+  --grey-color-light: #e8e8e8;
+  --grey-color-dark:  #424242;
+}
+
+html {
+  font: 400 16px/1.75 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
   font-kerning: normal;
 }
 
@@ -60,7 +69,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: 0.875rem;
 }
 
 
@@ -96,15 +105,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: var(--accent-color);
   text-decoration: none;
 
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
   &:hover {
-    color: $text-color;
     text-decoration: underline;
   }
 
@@ -122,8 +126,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
   padding-left: $spacing-unit * 0.5;
   font-size: 1.125rem;
   letter-spacing: -1px;
@@ -142,7 +146,7 @@ blockquote {
 pre,
 code {
   font-size: 0.9375rem;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   border-radius: 3px;
   background-color: #eef;
 }
@@ -168,33 +172,18 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
-  @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit * 0.5;
     padding-left: $spacing-unit * 0.5;
   }
 }
-
-
-
-/**
- * Clearfix
- */
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 
 
 /**
@@ -205,7 +194,7 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{$grey-color};
+    fill: var(--grey-color);
     padding-right: 5px;
     vertical-align: text-top;
 }
@@ -224,24 +213,24 @@ pre {
 table {
   margin-bottom: $spacing-unit;
   width: 100%;
-  text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  text-align: left;
+  color: #3f3f3f;
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: #f7f7f7; // lighten($grey-color-light, 6%);
     }
   }
   th, td {
     padding: math.div($spacing-unit, 3) ($spacing-unit * 0.5);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: #f0f0f0; // lighten($grey-color-light, 3%);
+    border: 1px solid #dedede; // darken($grey-color-light, 4%);
+    border-bottom-color: #c9c9c9; // darken($grey-color-light, 12%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--grey-color-light);
   }
 }
