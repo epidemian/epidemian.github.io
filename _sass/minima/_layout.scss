@@ -202,6 +202,10 @@
   color: $grey-color;
 }
 
+.post-meta > *:not(:first-child):before {
+  content: ' • '
+}
+
 .post-link {
   display: block;
   @include relative-font-size(1.5);
@@ -219,10 +223,6 @@
 .post-title {
   @include relative-font-size(2);
   line-height: 1;
-
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
 }
 
 .post-content {
