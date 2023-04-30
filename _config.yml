@@ -21,3 +21,7 @@ permalink: /:categories/:title
 collections:
   posts:
     permalink: /blog/:title
+
+exclude:
+  - CNAME
+  - server
