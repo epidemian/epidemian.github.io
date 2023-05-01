@@ -11,7 +11,7 @@ dl, dd, ol, ul, figure {
 html {
   --text-color:       #111;
   --background-color: #fdfdfd;
-  --accent-color:     #2a7ae2;
+  --link-color:       #2a7ae2;
   --grey-color:       #828282;
   --grey-color-light: #e8e8e8;
   --grey-color-dark:  #424242;
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: var(--accent-color);
+  color: var(--link-color);
   text-decoration: none;
 
   &:hover {
