@@ -30,40 +30,19 @@ body {
   flex-direction: column;
 }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
+  // Set `margin-bottom` to maintain vertical rhythm
   margin-bottom: $spacing-unit * 0.5;
 }
 
-
-
-/**
- * `main` element
- */
-main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
-}
-
-
-
-/**
- * Images
- */
 img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
 figure > img {
   display: block;
 }
@@ -72,11 +51,6 @@ figcaption {
   font-size: 0.875rem;
 }
 
-
-
-/**
- * Lists
- */
 ul, ol {
   margin-left: $spacing-unit;
 }
@@ -88,22 +62,12 @@ li {
   }
 }
 
-
-
-/**
- * Headings
- */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   // Libre Baskerville font has some really pretty ligatures. Too fancy for normal text, but totally acceptable for titles.
   font-variant-ligatures: common-ligatures discretionary-ligatures;
 }
 
-
-
-/**
- * Links
- */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -121,10 +85,6 @@ a {
   }
 }
 
-
-/**
- * Blockquotes
- */
 blockquote {
   color: var(--grey-color);
   border-left: 4px solid var(--grey-color-light);
@@ -138,11 +98,6 @@ blockquote {
   }
 }
 
-
-
-/**
- * Code formatting
- */
 pre,
 code {
   font-size: 0.9375rem;
@@ -166,36 +121,18 @@ pre {
   }
 }
 
-
-
-/**
- * Wrapper
- */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-
-  @include media-query($on-laptop) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit * 0.5;
-    padding-left: $spacing-unit * 0.5;
-  }
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
-
-
-/**
- * Icons
- */
 
 .svg-icon {
     width: 16px;
     height: 16px;
     display: inline-block;
     fill: var(--grey-color);
-    padding-right: 5px;
+    margin-right: 0.5rem;
     vertical-align: text-top;
 }
 
@@ -205,30 +142,24 @@ pre {
   }
 }
 
-
-
-/**
- * Tables
- */
 table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: left;
-  color: #3f3f3f;
+  color: var(--grey-color-dark);
   border-collapse: collapse;
   border: 1px solid var(--grey-color-light);
   tr {
     &:nth-child(even) {
-      background-color: #f7f7f7; // lighten($grey-color-light, 6%);
+      background-color: #f7f7f7;
     }
   }
   th, td {
     padding: math.div($spacing-unit, 3) ($spacing-unit * 0.5);
   }
   th {
-    background-color: #f0f0f0; // lighten($grey-color-light, 3%);
-    border: 1px solid #dedede; // darken($grey-color-light, 4%);
-    border-bottom-color: #c9c9c9; // darken($grey-color-light, 12%);
+    background-color: #f0f0f0;
+    border: 1px solid #dedede;
   }
   td {
     border: 1px solid var(--grey-color-light);

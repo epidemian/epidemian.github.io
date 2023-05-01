@@ -1,11 +1,12 @@
 @charset "utf-8";
 
+* {
+  box-sizing: border-box;
+}
+
 // Define defaults for each variable.
 
 $spacing-unit:     30px !default;
-
-// Width of the content area
-$content-width:    800px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
