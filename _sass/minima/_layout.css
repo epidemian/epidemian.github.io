@@ -4,8 +4,6 @@
 .site-header {
   border-top: 5px solid var(--grey-color-dark);
   border-bottom: 1px solid var(--grey-color-light);
-
-  // Positioning context for the mobile navigation icon
   position: relative;
 }
 
@@ -21,25 +19,24 @@
   color: var(--grey-color-dark);
 }
 
-.site-nav {
-  .nav-trigger {
-    display: none;
-  }
+.site-nav .nav-trigger {
+  display: none;
+}
 
-  .menu-icon {
-    display: none;
-  }
+.site-nav .menu-icon {
+  display: none;
+}
 
-  .page-link {
-    color: var(--text-color);
+.site-nav .page-link {
+  color: var(--text-color);
 
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
+}
+.site-nav .page-link:not(:last-child) {
+  margin-right: 20px;
+}
 
-  @include media-query($on-palm) {
+@media screen and (max-width: 600px) {
+  .site-nav {
     position: absolute;
     top: 9px;
     right: 1rem;
@@ -47,49 +44,42 @@
     border: 1px solid var(--grey-color-light);
     border-radius: 5px;
     text-align: right;
-
-    label[for="nav-trigger"] {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 36px;
-      z-index: 2;
-      cursor: pointer;
-    }
-
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg {
-        fill: var(--grey-color-dark);
-      }
-    }
-
-    input ~ .trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-      margin-left: 20px;
-    }
+  }
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .site-nav .menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .site-nav .menu-icon > svg {
+    fill: var(--grey-color-dark);
+  }
+  .site-nav input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+  .site-nav input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+  .site-nav .page-link {
+    display: block;
+    padding: 5px 10px;
+    margin-left: 20px;
+  }
+  .site-nav .page-link:not(:last-child) {
+    margin-right: 0;
   }
 }
 
@@ -138,7 +128,7 @@
   width: 45%;
 }
 
-@include media-query($on-laptop) {
+@media screen and (max-width: 800px) {
   .footer-col-1,
   .footer-col-2 {
     width: 50%;
@@ -149,7 +139,7 @@
   }
 }
 
-@include media-query($on-palm) {
+@media screen and (max-width: 600px) {
   .footer-col {
     float: none;
     width: 100%;
@@ -177,10 +167,9 @@
 .post-list {
   margin-left: 0;
   list-style: none;
-
-  > li {
-    margin-bottom: 2rem;
-  }
+}
+.post-list > li {
+  margin-bottom: 2rem;
 }
 
 .post-meta {
@@ -213,28 +202,13 @@
 
 .post-content {
   margin-bottom: 2rem;
-
-  h2 {
-    font-size: 2rem;
-
-    @include media-query($on-laptop) {
-      font-size: 1.75rem;
-    }
-  }
-
-  h3 {
-    font-size: 1.625rem;
-
-    @include media-query($on-laptop) {
-      font-size: 1.375rem;
-    }
-  }
-
-  h4 {
-    font-size: 1.25rem;
-
-    @include media-query($on-laptop) {
-      font-size: 1.125rem;
-    }
-  }
+}
+.post-content h2 {
+  font-size: 1.625rem;
+}
+.post-content h3 {
+  font-size: 1.25rem;
+}
+.post-content h4 {
+  font-size: 1.125rem;
 }
