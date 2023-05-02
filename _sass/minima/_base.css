@@ -30,7 +30,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-  // Set `margin-bottom` to maintain vertical rhythm
+  /* Set `margin-bottom` to maintain vertical rhythm */
   margin-bottom: 1rem;
 }
 
@@ -51,34 +51,29 @@ ul, ol {
   margin-left: 2rem;
 }
 
-li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
+li > ul,
+li > ol {
+  margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  // Libre Baskerville font has some really pretty ligatures. Too fancy for normal text, but totally acceptable for titles.
+  /* Libre Baskerville font has some really pretty ligatures. Too fancy for normal text, but totally acceptable for titles. */
   font-variant-ligatures: common-ligatures discretionary-ligatures;
 }
 
 a {
   color: var(--link-color);
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
-  }
+}
+a:hover {
+  text-decoration: underline;
+}
+.social-media-list a:hover {
+  text-decoration: none;
+}
+.social-media-list a:hover .username {
+  text-decoration: underline;
 }
 
 blockquote {
@@ -88,10 +83,9 @@ blockquote {
   font-size: 1.125rem;
   letter-spacing: -1px;
   font-style: italic;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
+}
+blockquote > :last-child {
+  margin-bottom: 0;
 }
 
 pre,
@@ -115,18 +109,16 @@ pre {
 }
 
 .svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: var(--grey-color);
-    margin-right: 0.5rem;
-    vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: var(--grey-color);
+  margin-right: 0.5rem;
+  vertical-align: text-top;
 }
 
-.social-media-list {
-  li + li {
-    padding-top: 5px;
-  }
+.social-media-list li + li {
+  padding-top: 5px;
 }
 
 table {
@@ -136,19 +128,17 @@ table {
   color: var(--grey-color-dark);
   border-collapse: collapse;
   border: 1px solid var(--grey-color-light);
-  tr {
-    &:nth-child(even) {
-      background-color: #f7f7f7;
-    }
-  }
-  th, td {
-    padding: 0.66rem 1rem;
-  }
-  th {
-    background-color: #f0f0f0;
-    border: 1px solid #dedede;
-  }
-  td {
-    border: 1px solid var(--grey-color-light);
-  }
+}
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+th, td {
+  padding: 0.66rem 1rem;
+}
+th {
+  background-color: #f0f0f0;
+  border: 1px solid #dedede;
+}
+td {
+  border: 1px solid var(--grey-color-light);
 }
