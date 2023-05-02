@@ -98,7 +98,13 @@ blockquote {
   }
 }
 
+pre,
+code {
+  font-family: ui-monospace, 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+}
+
 pre {
+  line-height: 1.5;
   background-color: #f3f3f9;
   padding: 8px 16px;
   overflow-x: auto;
