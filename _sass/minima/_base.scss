@@ -98,27 +98,12 @@ blockquote {
   }
 }
 
-pre,
-code {
-  font-size: 0.9375rem;
-  border: 1px solid var(--grey-color-light);
-  border-radius: 3px;
-  background-color: #eef;
-}
-
-code {
-  padding: 1px 5px;
-}
-
 pre {
-  padding: 8px 12px;
+  background-color: #f3f3f9;
+  padding: 8px 16px;
   overflow-x: auto;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
+  border-left: 1px solid var(--grey-color-dark);
+  overflow-x: auto;
 }
 
 .wrapper {
