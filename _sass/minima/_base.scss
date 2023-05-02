@@ -1,6 +1,3 @@
-@use "sass:list";
-@use "sass:math";
-
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -34,7 +31,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
   // Set `margin-bottom` to maintain vertical rhythm
-  margin-bottom: $spacing-unit * 0.5;
+  margin-bottom: 1rem;
 }
 
 img {
@@ -51,7 +48,7 @@ figcaption {
 }
 
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: 2rem;
 }
 
 li {
@@ -87,7 +84,7 @@ a {
 blockquote {
   color: var(--grey-color);
   border-left: 4px solid var(--grey-color-light);
-  padding-left: $spacing-unit * 0.5;
+  padding-left: 1rem;
   font-size: 1.125rem;
   letter-spacing: -1px;
   font-style: italic;
@@ -133,7 +130,7 @@ pre {
 }
 
 table {
-  margin-bottom: $spacing-unit;
+  margin-bottom: 2rem;
   width: 100%;
   text-align: left;
   color: var(--grey-color-dark);
@@ -145,7 +142,7 @@ table {
     }
   }
   th, td {
-    padding: math.div($spacing-unit, 3) ($spacing-unit * 0.5);
+    padding: 0.66rem 1rem;
   }
   th {
     background-color: #f0f0f0;
