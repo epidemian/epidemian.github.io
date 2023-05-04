@@ -1,7 +1,7 @@
 ---
 title: "Bash variable substitutions & less tricks"
 layout: post
-tags: TIL Bash
+tags: TIL bash
 ---
 
 It's always nice to learn a new trick that may ever so slightly improve the way we use our tools. Today i learned two such little tricks regarding the command-line.
@@ -10,7 +10,7 @@ The first one is that, in Bash, we can do a `sed`-like substitution on the conte
 
 As a toy example, consider converting a Reddit URL to the old (and arguably better) version of the site:
 
-```bash
+```console
 $ url="https://reddit.com/r/commandline/"
 $ echo ${url/reddit/old.reddit}
 https://old.reddit.com/r/commandline/

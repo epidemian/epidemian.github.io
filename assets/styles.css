@@ -404,7 +404,6 @@ td {
 .highlight .cs { color: #008000 } /* Comment.Special */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gh { font-weight: bold } /* Generic.Heading */
-.highlight .gp { font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { font-weight: bold } /* Generic.Subheading */
 .highlight .kc { color: #0000ff } /* Keyword.Constant */
@@ -429,3 +428,6 @@ td {
 .highlight .sr { color: #a31515 } /* Literal.String.Regex */
 .highlight .s1 { color: #a31515 } /* Literal.String.Single */
 .highlight .ss { color: #a31515 } /* Literal.String.Symbol */
+
+/* Tweak: de-emphasize console prompt */
+.highlight .gp { color: var(--grey-color) }
