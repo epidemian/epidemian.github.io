@@ -175,7 +175,7 @@ td {
 /**
  * Site header
  */
- .site-header {
+.site-header {
   border-top: 5px solid var(--grey-color-dark);
   border-bottom: 1px solid var(--grey-color-light);
   position: relative;
@@ -189,8 +189,9 @@ td {
 }
 
 .site-title {
-  font-size: 1.625rem;
+  font-size: 1.25rem;
   color: var(--grey-color-dark);
+  text-transform: lowercase;
 }
 
 .site-nav .nav-trigger {
