@@ -34,7 +34,7 @@ dl, dd, ol, ul, figure {
 html {
   --text-color:       #111;
   --background-color: #fdfdfd;
-  --link-color:       #2a7ae2;
+  --accent-color:     #00a50a;
   --grey-color:       #828282;
   --grey-color-light: #e8e8e8;
   --grey-color-dark:  #424242;
@@ -91,13 +91,19 @@ h1, h2, h3, h4, h5, h6 {
   font-variant-ligatures: common-ligatures discretionary-ligatures;
 }
 
-a {
-  color: var(--link-color);
+a:not(.inert-link) {
+	color: var(--text-color);
+	transition: all 0.15s;
+	text-underline-offset: 0.1em;
+}
+a:not(.inert-link):hover {
+	text-underline-offset: 0.3em;
+	color: var(--accent-color);
+}
+.inert-link {
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 .social-media-list a:hover {
   text-decoration: none;
 }
@@ -361,8 +367,6 @@ td {
   font-size: 1.5rem;
 }
 
-
-
 /**
  * Posts
  */
@@ -376,6 +380,7 @@ td {
 }
 
 .post-content {
+  counter-reset: sidenote-counter;
   margin-bottom: 2rem;
 }
 .post-content h2 {
@@ -386,6 +391,35 @@ td {
 }
 .post-content h4 {
   font-size: 1.125rem;
+}
+
+.sidenote {
+	float: right;
+  clear: right;
+	width: 45%;
+	margin-right: -55%;
+	font-size: 0.875rem;
+  position: relative;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+	font-size: 11px;
+	position: relative;
+	top: -0.4rem;
+	margin-left: 0.2rem;
+  text-decoration: underline;
+}
+
+.sidenote-number + .sidenote::before {
+  content: counter(sidenote-counter) ". ";
+  white-space: pre;
+	position: absolute;
+	right: 100%;
 }
 
 /* Syntax highlight colors generated with `pygmentize -S vs -f html` */
