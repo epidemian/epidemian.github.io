@@ -1,6 +1,5 @@
 ---
 title: "Programming vs mathematical curiosity"
-title: "6174: Programming vs maths curiosity"
 layout: post
 tags: maths ruby
 ---
@@ -61,7 +60,9 @@ So we only care about repdigits of 4 digits like 1111, 2222, and so on. In other
 def repdigit?(n) = n % 1111 == 0
 ```
 
-Jumping up a bit in abstraction level, the logic of repeatedly rearranging the digits of a number into ascending and descending order, and subtracting those two until the result starts to repeat —aka Kaprekar's routine— can be written as:
+### Kaprekar's routine
+
+Jumping up a bit in abstraction level, the logic of repeatedly rearranging the digits of a number into ascending and descending order, and subtracting those two until the result starts to repeat —aka Kaprekar's routine— can be encoded as:
 
 ```ruby
 def kap(n)
@@ -70,9 +71,9 @@ def kap(n)
 end
 ```
 
-We take the difference of the two rearrangements of the number's digits (which we haven't defined yet). If that difference equal to the input number, then we have found where the sequence starts repeating and we return that number. And if it's not the same, we recur and do the same thing again with the difference.
+We take the difference of the two rearrangements of the number's digits (which we haven't defined yet). If that difference is equal to the input number, then we have found where the sequence starts repeating and we return that number. And if it's not the same, we recur and do the same thing again this time with the difference.
 
-Note that this recursive function only terminates if the operation reaches the same number at some point. But we *know* that to be true; that's the whole point of writing this program! We just want to check it ourselves. Even more: [it is known][kaprekar routine] that for 4-digit numbers this operation actually converges in 7 or less steps, so if we preferred iteration over recursion we could've written:
+Note that this recursive function only terminates if the operation reaches the same number at some point. But we *know* that to be true; that's the whole point of writing this program! We just want to check this curious property ourselves. Even more: [it is known][kaprekar routine] that for 4-digit numbers this operation actually converges in 7 or less steps, so if we preferred iteration over recursion we could've written:
 
 ```ruby
 def kap(n)
@@ -84,6 +85,8 @@ end
 ```
 
 Both versions will work fine for our purposes. If for some reason Kaprekar's property would not hold for some number, the iterative version would give us a wrong result, and the recursive version would hang forever or overflow the stack<span class="sidenote-number" /><span class="sidenote">Which of the two? That's [an interesting question][ruby TCO]!</span>. Either way, we would know that we have screwed up our "proof" somewhere. *It's fine.*
+
+### Rearranging digits
 
 Rearranging the digits of a number to be in ascending order is straightforward now that we know about the `digits` method:
 
@@ -148,6 +151,8 @@ irb(main):012> kap(1000)
 => 6174
 ```
 
+### The final "proof"
+
 Finally, we can define the main logic of this "proof":
 
 ```ruby
@@ -159,7 +164,7 @@ end
 
 Again, notice how Ruby code can read as a condensed version of its English translation: for every number from 1 up to 9999, the number is either a repdigit, or its Kaprekar routine converges to 6174. If neither of these is true, the "proof" program fails.
 
-You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` form. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish it from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, i think using `and` and `or` as control flow operators —and alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we think them<span class="sidenote-number" /><span class="sidenote">Although, i have to admit, this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways of doing the same thing][timtowtdi]. Generally i prefer languages having one obvious way of doing things, so i'll think about my choice here as a rare escape to my usual structuredness :)</span>.
+You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` form. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish it from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, i think using `and` and `or` as control flow operators —and alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we think them<span class="sidenote-number" /><span class="sidenote">Although, i have to admit, this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things, so i'll think about my choice here as a rare exception to my usual structuredness :)</span>.
 
 Stitching all these snippets together, the complete "proof" program is:
 
@@ -179,7 +184,7 @@ def repdigit?(n) = n % 1111 == 0
 end
 ```
 
-And running it confirms that, indeed, Kaprekar's routing converges to 6174 for all 4-digit as long as the number is not a single repeated digit.
+And running it confirms that, indeed, Kaprekar's routine converges to 6174 for all 4-digit numbers as long as the number is not a single repeated digit.
 
 ### Wait wasn't this about maths or something?
 
@@ -201,7 +206,7 @@ But i appreciate having played with this. It seems i'm not that into maths as i 
 
 And how about you? What was on *your* mind while your eyes read this?
 
-Thank you very much for coming with me in this journey.
+Thank you very much for coming along in this little journey.
 
 [fixed point]: https://en.wikipedia.org/wiki/Fixed_point_(mathematics)
 [6174]: https://en.wikipedia.org/wiki/6174_(number)
