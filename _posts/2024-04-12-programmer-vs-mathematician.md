@@ -4,7 +4,7 @@ layout: post
 tags: maths ruby
 ---
 
-Recently i came across a puzzling property of numbers that made me think of what "tickles" my mind as a programmer, and how that might differ from what sparkles curiosity on a typical mathematician's mind<span class="sidenote-number" /><span class="sidenote">Of course, this is all painting with very broad strokes. Every person is different.</span>.
+Recently i came across a puzzling property of numbers that got me to reflect on what "tickles" my mind as a programmer. And how programmers and mathematicians, even though they share much in common —a mix of playfulness and rigour, and a knack for logic problem solving—, might be motivated by very different things<span class="sidenote-number" /><span class="sidenote">Of course, this is all painting with very broad strokes. Every person is different.</span>.
 
 Consider this simple question: what would happen if we pick a number, arrange its digits in descending and ascending order to get two different numbers, and then subtract those two?
 
@@ -32,13 +32,13 @@ Once we hit 6174 the sequence starts repeating, as the result of applying this "
 
 Now here's the kicker: as long as the starting number is not a single repeated digit, **we can start from any 4-digit number and the sequence will always reach 6174**.
 
-Of course, i'm not the first person to notice this. 6174 is known as [Karprekar's constant][6174], in honor of the mathematician who discovered this curious property.
+Of course, i'm not the first person to notice this. 6174 is known as [Kaprekar's constant][6174], in honor of the mathematician who discovered this curious property.
 
 I don't know about you, but i was quite surprised when i first heard about this. All numbers converging to a single one? Instead of maybe converging to different numbers, or getting into loops? I didn't expect that!
 
 But i also didn't have the mathematical tools —or curiosity really— to dig into the maths of this to understand it more deeply. Luckily, there aren't that many 4-digit numbers, and computers are quite fast, or so i've been told. So instead of mathematically proving this the "correct" way, let's have some fun and write a simple Ruby program<span class="sidenote-number" /><span class="sidenote">We could've gone with any language really, but i like using Ruby for this kind of thing. It gets out of the way and allows expressing things quite freely. </span> to check this property for every 4-digit number.
 
-### A simple "proof" program
+### A simple subproblem
 
 Let's do some bottom-up development and start with the simplest bit: checking if a number consists of a single repeating digit. These numbers are called [repdigits][repdigit] in recreational mathematics.
 
@@ -162,7 +162,7 @@ Now at the top of this bottom-up process, we can define the main logic of the pr
 end
 ```
 
-Again, notice how Ruby code can read as a condensed version of its English translation: for every number from 1 up to 9999, the number is either a repdigit, or its Kaprekar routine converges to 6174. If neither of these is true, the "proof" fails.
+Again, notice how Ruby code can read as a condensed version of its English translation: for every number from 1 up to 9999, the number is either a repdigit, or its Kaprekar sequence converges to 6174. If neither of these is true, the "proof" fails.
 
 You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` alternative. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish control flow methods from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, i think using `and` and `or` as control flow operators —as alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we conceive them<span class="sidenote-number" /><span class="sidenote">Although, i have to admit, this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things. So i'll think about my choice here as a rare exception to my usual structuredness :)</span>.
 
@@ -194,11 +194,11 @@ In my case at least, when i learned about Kaprekar's result, my mind immediately
 
 * to different ways of expressing the same thing and trying to find one i like the best
 * to recursion vs iteration
-* to programming languages' syntactic choices
-* to programming languages' philosophy
+* to programming languages' questionable syntactic choices
+* to programming languages' philosophies
 * to writing software top-down vs bottom-up
 
-Of course, these are the things that interest me, and so naturally my mind went there. Once i got the program written and running, the little speck of mathematical curiosity i initially had was gone.
+Of course, these are all things that interest me, and so naturally my mind went there. Once i got the program written and running, the little speck of mathematical curiosity i initially had was gone.
 
 I suspect a more maths-oriented person would go through this very differently. Maybe they'd try to find an elegant analytical proof, without the aid of a dumb number-crunching machine brute-forcing its way through. Or they'd try to generalize the problem to different number of digits, or different number bases. I don't really know.
 
