@@ -10,21 +10,21 @@ Consider this simple question: what would happen if we pick a number, arrange it
 
 For example, let's pick the number 1988. Arranging its digits in descending and ascending order we get 9881 and 1889, and subtracting those two we get 7992. Riveting, yes. But what would happen if we repeat this process now starting from 7992, and then keep going?
 
-I would recommend to take a moment to consider what would happen. Not necessarily to check it with pen and paper, but what does your intuition say?
+Please take a moment and consider what would happen. Not necessarily to check it with pen and paper, but what does your intuition say?
 
 Well, let's see. Starting from 1988 the sequence would go:
 
 <div class="sidenote">Sidenote: if we had started from 2023 —the year i started writing and procrastinating this blog post— the sequence would look almost the same. The first step would be 3220&nbsp;−&nbsp;0223&nbsp;=&nbsp;2997, and after that it would continue the same way. This is not such a cosmic coincidence as it seems; the numbers on these sequences tend to repeat a lot.</div>
 
-{:style="list-style-type: '→ '"}
-- 9881 − 1889 = 7992
-- 9972 − 2799 = 7173
-- 7731 − 1377 = 6354
-- 6543 − 3456 = 3087
-- 8730 − 0378 = 8352
-- 8532 − 2358 = 6174
-- 7641 − 1467 = 6174
-- 7641 − 1467 = 6174
+{:style="list-style-type: none"}
+- 1998 → 9881 − 1889 = 7992
+- 7992 → 9972 − 2799 = 7173
+- 7173 → 7731 − 1377 = 6354
+- 6354 → 6543 − 3456 = 3087
+- 3087 → 8730 − 0378 = 8352
+- 8352 → 8532 − 2358 = 6174
+- 6174 → 7641 − 1467 = 6174
+- 6174 → 7641 − 1467 = 6174
 - …
 
 
@@ -32,11 +32,11 @@ Once we hit 6174 the sequence starts repeating, as the result of applying this "
 
 Now here's the kicker: as long as the starting number is not a single repeated digit, **we can start from any 4-digit number and the sequence will always reach 6174**.
 
-Of course, i'm not the first person to notice this. This number is known as [Karprekar's constant][6174], in honor of the mathematician who discovered this curious property.
+Of course, i'm not the first person to notice this. 6174 is known as [Karprekar's constant][6174], in honor of the mathematician who discovered this curious property.
 
-I don't know about you, but i was quite surprised when i first heard about this. All numbers converging to a single one, instead of maybe converging to different numbers or getting into loops. I would not have expected that!
+I don't know about you, but i was quite surprised when i first heard about this. All numbers converging to a single one? Instead of maybe converging to different numbers, or getting into loops? I didn't expect that!
 
-But i didn't have the mathematical tools, or curiosity really, to dig into this more deeply. Luckily, there aren't that many 4-digit numbers, and computers are quite fast, or so i've been told. So instead of mathematically proving this the "correct" way, let's have some fun and write a simple Ruby program<span class="sidenote-number" /><span class="sidenote">We could've gone with any language really, but i like using Ruby for this kind of thing. It gets out of the way and allows expressing things quite freely. </span> to check this property for every 4-digit number.
+But i also didn't have the mathematical tools —or curiosity really— to dig into the maths of this to understand it more deeply. Luckily, there aren't that many 4-digit numbers, and computers are quite fast, or so i've been told. So instead of mathematically proving this the "correct" way, let's have some fun and write a simple Ruby program<span class="sidenote-number" /><span class="sidenote">We could've gone with any language really, but i like using Ruby for this kind of thing. It gets out of the way and allows expressing things quite freely. </span> to check this property for every 4-digit number.
 
 ### A simple "proof" program
 
@@ -48,11 +48,11 @@ def repdigit?(n) = n.digits.uniq.size == 1
 
 There's quite a bit going on on this line if you're not used to Ruby, so let's break it apart. The `n.digits` method gives us an array with the number's base-10 digits. Then we filter out repeated digits using `uniq`. So we're basically saying: a number is a repdigit if it has only one distinct digit. The code reads almost as a condensed version of it's English explanation.
 
-By the way, if you're wondering about this `def name(args) = expr` business, that is Ruby's ["endless" method][endless methods] syntax, which debuted on version 3.0. I'm still on the fence about it to be honest. On the one hand, it seems like the kind of unnecessary syntax sugar that tends to bloat languages and complicates answering basic questions like "how do i define a method?". But at the same time, it can be useful to distinguish the cases where something can be expressed succinctly in a single expression, and the cases where multiple statements are needed.
+By the way, if you're wondering about this `def name(args) = expr` weirdness, that is Ruby's ["endless" method][endless methods] syntax, which debuted on version 3.0. I'm still on the fence about it to be honest. On the one hand, it seems like the kind of unnecessary syntax sugar that tends to bloat languages and complicates answering basic questions like "how do i define a method?". But at the same time, it can be useful to distinguish the cases where something can be expressed succinctly in a single expression, and the cases where multiple statements are needed.
 
 Oh and yes, method names can end with `?`, which is actually the convention for boolean predicates in Ruby.
 
-Anyways, back to our program. This `repdigit?` definition is correct and works for numbers of any length. But we only care about 4-digit numbers. And Kaprekar's property also works for smaller numbers if we extend them with leading zeroes. For example, 777 is a repdigit, but if we consider it a 4-digit number and write it as 0777 then we can start the sequence with 7770&nbsp;-&nbsp;0777&nbsp;=&nbsp;6993 and we'd reach Kaprekar's constant in 3 more steps.
+Anyway, back to our program! This `repdigit?` definition is correct and works for numbers of any length. But we only care about 4-digit numbers. And Kaprekar's property also works for smaller numbers if we extend them with leading zeroes. For example, 777 is a repdigit, but if we consider it a 4-digit number and write it as 0777 then we can start the sequence with 7770&nbsp;-&nbsp;0777&nbsp;=&nbsp;6993 and we'd reach Kaprekar's constant in 3 more steps.
 
 So we only care about repdigits of 4 digits like 1111, 2222, and so on. In other words, multiples of 1111. So the `repdigit?` predicate can be simplified to:
 
@@ -71,9 +71,9 @@ def kap(n)
 end
 ```
 
-We take the difference of the two rearrangements of the number's digits (which we haven't defined yet). If that difference is equal to the input number, then we have found where the sequence starts repeating and we return that number. And if it's not the same, we recur and do the same thing again this time with the difference.
+We take the difference of the two rearrangements of the number's digits (which we haven't defined yet). If that difference is equal to the input number, then we have found where the sequence starts repeating and we return that number. And if it's a different number, we recur and do the same thing again this time with the difference.
 
-Note that this recursive function only terminates if the operation reaches the same number at some point. But we *know* that to be true; that's the whole point of writing this program! We just want to check this curious property ourselves. Even more: [it is known][kaprekar routine] that for 4-digit numbers this operation actually converges in 7 or less steps, so if we preferred iteration over recursion we could've written:
+Note that this recursive function only terminates if the operation reaches the same number at some point. But we *know* that to be true; that's the whole point of writing this program! We just want to check this programmatically. It doesn't make sense to defend against an infinite recursion that we know won't happen. Even more: [it is known][kaprekar routine] that for 4-digit numbers this operation actually converges in 7 or less steps, so if we preferred iteration over recursion we could've written:
 
 ```ruby
 def kap(n)
@@ -84,7 +84,7 @@ def kap(n)
 end
 ```
 
-Both versions will work fine for our purposes. If for some reason Kaprekar's property would not hold for some number, the iterative version would give us a wrong result, and the recursive version would hang forever or overflow the stack<span class="sidenote-number" /><span class="sidenote">Which of the two? That's [an interesting question][ruby TCO]!</span>. Either way, we would know that we have screwed up our "proof" somewhere. *It's fine.*
+Both versions will work fine for our purposes. If for some reason Kaprekar's property doesn't hold for some number, the iterative version will give us a wrong result, and the recursive version will hang forever or overflow the stack<span class="sidenote-number" /><span class="sidenote">Which of the two? That's [an interesting question][ruby TCO]!</span>. Either way, we would know that we have screwed up our "proof" somewhere. *It's fine.*
 
 ### Rearranging digits
 
@@ -94,7 +94,7 @@ Rearranging the digits of a number to be in ascending order is straightforward n
 def ascending_digits(n) = n.digits.sort.join.to_i
 ```
 
-We take the digits of the number, sort them, then `join` them into a string, and then convert that string to an integer with `to_i`. Maybe a bit much unnecessary allocations for my current taste, but for a small proof program like this that's totally fine.
+We take the digits of the number, sort them, then `join` them into a string, and then convert that string to an integer with `to_i`<span class="sidenote-number" /><span class="sidenote">Maybe a bit much unnecessary allocations for my current taste, but for a small proof program like this that's totally fine.</span>.
 
 We can quickly test this on Ruby's interactive console, `irb`<span class="sidenote-number" /><span class="sidenote">Which i would recommend using for this kind of exploratory programming instead of the more "classic" approach of writing a program on a source file, running it, tweaking it, running it again, etc. Once you have your little bits of program written and tested on the console, you can copy them onto an actual program file.</span>:
 
@@ -142,7 +142,7 @@ def descending_digits(n) = n.digits.sort.reverse.join.ljust(4, '0').to_i
 
 After sorting the digits and joining them into a string, we're using `ljust(4, '0')` to pad the string with zeroes to the right so it is 4 characters long<span class="sidenote-number" /><span class="sidenote">A bit hacky, yes, but it gets the job done. And i think it's quite succinct, and readable enough. If you can think of a better alternative, please let me know :)</span>.
 
-With that fix, now `kap(n)` seems to work as intended:
+With that hotfix in, `kap(n)` now seems to work as intended:
 
 ```ruby
 irb(main):011> kap(1988)
@@ -153,7 +153,7 @@ irb(main):012> kap(1000)
 
 ### The final "proof"
 
-Finally, we can define the main logic of this "proof":
+Now at the top of this bottom-up process, we can define the main logic of the program:
 
 ```ruby
 1.upto(9999) do |n|
@@ -162,9 +162,9 @@ Finally, we can define the main logic of this "proof":
 end
 ```
 
-Again, notice how Ruby code can read as a condensed version of its English translation: for every number from 1 up to 9999, the number is either a repdigit, or its Kaprekar routine converges to 6174. If neither of these is true, the "proof" program fails.
+Again, notice how Ruby code can read as a condensed version of its English translation: for every number from 1 up to 9999, the number is either a repdigit, or its Kaprekar routine converges to 6174. If neither of these is true, the "proof" fails.
 
-You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` form. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish it from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, i think using `and` and `or` as control flow operators —and alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we think them<span class="sidenote-number" /><span class="sidenote">Although, i have to admit, this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things, so i'll think about my choice here as a rare exception to my usual structuredness :)</span>.
+You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` alternative. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish control flow methods from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, i think using `and` and `or` as control flow operators —as alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we conceive them<span class="sidenote-number" /><span class="sidenote">Although, i have to admit, this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things. So i'll think about my choice here as a rare exception to my usual structuredness :)</span>.
 
 Stitching all these snippets together, the complete "proof" program is:
 
@@ -202,11 +202,9 @@ Of course, these are the things that interest me, and so naturally my mind went 
 
 I suspect a more maths-oriented person would go through this very differently. Maybe they'd try to find an elegant analytical proof, without the aid of a dumb number-crunching machine brute-forcing its way through. Or they'd try to generalize the problem to different number of digits, or different number bases. I don't really know.
 
-But i appreciate having played with this. It seems i'm not that into maths as i once thought. And that i like programming a lot. Who would have thought?
+But i appreciate having played with this. It seems i'm not that into maths as i once thought. And that i love programming. Who would have thought?
 
-And how about you? What was on *your* mind while your eyes read this?
-
-Thank you very much for coming along in this little journey.
+And how about you? What was on *your* mind while your eyes read this<span class="sidenote-number" /><span class="sidenote">Assuming they did, in which case: thank you very much for coming along.</span>?
 
 [fixed point]: https://en.wikipedia.org/wiki/Fixed_point_(mathematics)
 [6174]: https://en.wikipedia.org/wiki/6174_(number)
