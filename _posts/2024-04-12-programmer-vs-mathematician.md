@@ -96,7 +96,9 @@ def ascending_digits(n) = n.digits.sort.join.to_i
 
 We take the digits of the number, sort them, then `join` them into a string, and then convert that string to an integer with `to_i`. Maybe a bit too many unnecessary allocations for some tastes, but for a small proof program like this, it's totally fine.
 
-We can quickly test this on Ruby's interactive console, `irb`:<span class="sidenote-number" /><span class="sidenote"> Which i would recommend using for this kind of exploratory programming instead of the more "classic" approach of writing a program on a source file, running it, tweaking it, running it again, etc. Once you have your little bits of program written and tested on the console, you can copy them onto an actual program file.</span>
+We can quickly test this on Ruby's interactive console, `irb`:
+
+<span class="sidenote"><abbr title="Read-eval-print loop">REPLs</abbr> are great for this kind of exploratory programming. Instead of the more "classic" approach of writing a program on a source file, running it, tweaking it, running it again, etc, a REPL allow for a much tighter, almost immediate, feedback loop. Once you have your little bits of program written and tested on the console, you can copy them onto a program file.</span>
 
 ```irb
 $ irb
