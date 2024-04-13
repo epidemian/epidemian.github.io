@@ -398,6 +398,7 @@ td {
   clear: right;
 	width: 45%;
 	margin-right: -55%;
+  margin-bottom: 1em;
 	font-size: 0.875rem;
   position: relative;
 }
