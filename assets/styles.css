@@ -360,10 +360,10 @@ td {
 .sidenote {
 	float: right;
   clear: right;
-  width: 50%;
+  width: 48%;
   margin-right: -60%;
   margin-bottom: 1em;
-	font-size: 0.875rem;
+	font-size: 0.9rem;
   position: relative;
 }
 
