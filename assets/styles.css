@@ -138,9 +138,10 @@ pre {
 }
 
 .wrapper {
-  max-width: 48rem;
+  max-width: 1168px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 10%;
+  box-sizing: content-box;
 }
 
 .svg-icon {
@@ -216,7 +217,7 @@ td {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .site-nav {
     position: absolute;
     top: 9px;
@@ -271,7 +272,6 @@ td {
 .site-footer {
   border-top: 1px solid var(--grey-color-light);
   padding: 1rem 0;
-  text-align: center;
 }
 
 .footer-heading {
@@ -330,6 +330,10 @@ td {
 /**
  * Posts
  */
+.post {
+  width: 62.5%;
+}
+
 .post-header {
   margin-bottom: 2rem;
 }
@@ -356,8 +360,8 @@ td {
 .sidenote {
 	float: right;
   clear: right;
-	width: 45%;
-	margin-right: -55%;
+  width: 50%;
+  margin-right: -60%;
   margin-bottom: 1em;
 	font-size: 0.875rem;
   position: relative;
