@@ -32,11 +32,11 @@ Once we hit 6174 the sequence starts repeating, as the result of applying this "
 
 Now here's the kicker: as long as the starting number is not a single repeated digit, **we can start from any 4-digit number and the sequence will always reach 6174**.
 
-Of course, i'm not the first person to notice this. 6174 is known as [Kaprekar's constant][6174], in honor of the mathematician who discovered this curious property.
+Of course, this is not a new discovery. 6174 is known as [Kaprekar's constant][6174], in honor of the mathematician who found this curious property.
 
-I don't know about you, but i was quite surprised when i first heard about this. All numbers converging to a single one? Instead of maybe converging to different numbers, or getting into loops? I didn't expect that!
+I don't know about you, but this surprised me when i first heard about it. All numbers converging to a single one? Instead of maybe converging to different numbers, or getting into loops? Who would've expected that!?
 
-But i also didn't have the mathematical tools —or curiosity really— to dig into the maths of this to understand it more deeply. Luckily, there aren't that many 4-digit numbers, and computers are quite fast, or so i've been told. So instead of mathematically proving this the "correct" way, let's have some fun and write a simple Ruby program to check this property for every 4-digit number.<span class="sidenote-number" /><span class="sidenote"> We could use any language really. I like using Ruby for this kind of explorations because it gets out of the way and allows expressing things quite freely. </span>
+But i also didn't have the mathematical tools —or curiosity really— to dig into the maths of this to understand it more deeply. Luckily, there aren't that many 4-digit numbers, and computers are pretty fast, or so i've been told. So instead of mathematically proving this the "correct" way, let's have some fun and write a simple Ruby program to check this property for every 4-digit number.<span class="sidenote-number" /><span class="sidenote"> We could use any language really. I like using Ruby for this kind of explorations because it gets out of the way and allows expressing things quite freely.</span>
 
 ### A simple subproblem
 
@@ -142,7 +142,7 @@ We need to make `descending_digits` consider its inputs as 4-digit numbers, so t
 def descending_digits(n) = n.digits.sort.reverse.join.ljust(4, '0').to_i
 ```
 
-After sorting the digits and joining them into a string, we're using `ljust(4, '0')` to pad the string with zeroes to the right so it is 4 characters long.<span class="sidenote-number" /><span class="sidenote"> A bit hacky, yes, but it gets the job done. And i think it's quite succinct, and readable enough. If you can think of a better alternative, please let me know!</span>
+After sorting the digits and joining them into a string, we're using `ljust(4, '0')` to pad the string with zeroes to the right so it is 4 characters long.<span class="sidenote-number" /><span class="sidenote"> A bit hacky, yes, but it gets the job done. At least it's quite succinct, and readable enough. If you can think of a better alternative, please let me know!</span>
 
 With that hotfix in, `kap(n)` now seems to work as intended:
 
@@ -166,7 +166,7 @@ end
 
 Again, notice how Ruby code can read as a condensed version of its English translation: for every number from 1 up to 9999, the number is either a repdigit, or its Kaprekar sequence converges to 6174. If neither of these is true, the "proof" fails.
 
-You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` alternative. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish control flow methods from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, i think using `and` and `or` as control flow operators —as alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we conceive them.<span class="sidenote-number" /><span class="sidenote"> Although, i have to admit, this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things. So i'll think about my choice here as a rare exception to my usual structuredness :)</span>
+You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` alternative. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish control flow methods from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, using `and` and `or` as control flow operators —as alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we conceive them.<span class="sidenote-number" /><span class="sidenote"> Although, i'll admit this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things. So i'll think about my choice here as a rare exception to my usual structuredness :)</span>
 
 Stitching all these snippets together, the complete "proof" program is:
 
@@ -188,13 +188,13 @@ end
 
 And running it confirms that, indeed, Kaprekar's routine converges to 6174 for all 4-digit numbers as long as the number is not a single repeated digit.
 
-### Wait wasn't this about maths or something?
+### Wait, wasn't this about maths or something?
 
 Well, yes. And no. The story starts as a maths puzzle, but it's really about the journey after that.
 
 In my case at least, when i learned about Kaprekar's result, my mind immediately jumped from "that cannot be!" to "i *must* write a program to check this for all numbers!". And you can see where my curiosity wandered while writing that program:
 
-* to different ways of expressing the same thing and trying to find one i like the best
+* to different ways of expressing the same idea and trying to find one i like the best
 * to recursion vs iteration
 * to programming languages' questionable syntactic choices
 * to programming languages' philosophies
