@@ -138,10 +138,22 @@ pre {
 }
 
 .wrapper {
-  max-width: 1168px;
   margin: 0 auto;
   padding: 0 10%;
+  max-width: 730px;
+  /* Use content-box box sizing so that the percentage padding is not counted as
+  part of the width. This avoid content getting narrower as the viewport gets
+  bigger. */
   box-sizing: content-box;
+}
+
+/* When a post has sidenotes, the horizontal space distribution is:
+10+50+5+25+10 Where there's 10% space to each side, the main text takes 50%, the
+sidenotes 25%, and there's a 5% gap between them. All this up to a maximum total
+size of 1460px. */
+body:has(.sidenote) .wrapper {
+  /* Consider the space taken by the padding. */
+  max-width: calc(1460px * 0.8);
 }
 
 .svg-icon {
@@ -330,8 +342,9 @@ td {
 /**
  * Posts
  */
-.post {
-  width: 62.5%;
+.post:has(.sidenote) {
+  /* Post text takes 50% of the screen, but its container is 80% due to padding. */
+  width: calc(50% / 0.8);
 }
 
 .post-header {
@@ -396,7 +409,7 @@ td {
     padding-left: 7.5%;
     padding-right: 7.5%;
   }
-  .post {
+  .post:has(.sidenote) {
     width: auto;
   }
   /* TODO: show sidenotes on small screens */
