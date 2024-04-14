@@ -5,7 +5,8 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title inert-link" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
-    {%- if page_paths -%}
+    {%- assign show_site_nav = false -%}
+    {%- if page_paths and show_site_nav -%}
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
