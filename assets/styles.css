@@ -226,8 +226,12 @@ td {
  * Page content
  */
 .page-content {
-  padding: 2rem 0;
   flex: 1;
+}
+
+.page-content .wrapper {
+  padding-top: min(3rem, 7.5%);
+  padding-bottom: min(3rem, 7.5%);
 }
 
 .page-heading {
@@ -252,7 +256,7 @@ td {
 }
 
 .post-meta > *:not(:first-child)::before {
-  content: ' • '
+  content: ' ⸰ ';
 }
 
 .post-link {
@@ -291,6 +295,13 @@ td {
   font-size: 1.125rem;
 }
 
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  /* Leave some space between post "sections". */
+  margin-top: 3rem;
+}
+
 .sidenote {
 	float: right;
   clear: right;
@@ -322,7 +333,7 @@ td {
 }
 
 /**
- * Small screen styles
+ * Small screens layout.
  */
 @media screen and (max-width: 760px) {
   .wrapper {
