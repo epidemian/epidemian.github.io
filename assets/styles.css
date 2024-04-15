@@ -23,6 +23,13 @@
   font-display: fallback;
   src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(/assets/fonts/libre-baskerville-italic.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url(/assets/fonts/JetBrainsMono-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -125,7 +132,10 @@ blockquote > :last-child {
 
 pre,
 code {
-  font-family: ui-monospace, 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+  font-family: ui-monospace, 'JetBrains Mono', 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+  /* JetBrains Mono has beautiful ligatures, but it makes more sense for a blog
+  to have discernible characters. */
+  font-variant-ligatures: none;
 }
 
 code {
