@@ -192,95 +192,26 @@ td {
 }
 
 /**
- * Site header
+ * Header & Footer
  */
 .site-header {
   border-top: 5px solid var(--grey-color-dark);
+  padding: 0.5rem 0;
   border-bottom: 1px solid var(--grey-color-light);
-  position: relative;
 }
 
 .site-header > .wrapper {
-  height: 55px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .site-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--grey-color-dark);
-  text-transform: lowercase;
+  font-style: italic;
 }
 
-.site-nav .nav-trigger {
-  display: none;
-}
-
-.site-nav .menu-icon {
-  display: none;
-}
-
-.site-nav .page-link {
-  color: var(--text-color);
-
-}
-.site-nav .page-link:not(:last-child) {
-  margin-right: 20px;
-}
-
-@media screen and (max-width: 760px) {
-  .site-nav {
-    position: absolute;
-    top: 9px;
-    right: 1rem;
-    background-color: var(--background-color);
-    border: 1px solid var(--grey-color-light);
-    border-radius: 5px;
-    text-align: right;
-  }
-  .site-nav label[for="nav-trigger"] {
-    display: block;
-    float: right;
-    width: 36px;
-    height: 36px;
-    z-index: 2;
-    cursor: pointer;
-  }
-  .site-nav .menu-icon {
-    display: block;
-    float: right;
-    width: 36px;
-    height: 26px;
-    line-height: 0;
-    padding-top: 10px;
-    text-align: center;
-  }
-  .site-nav .menu-icon > svg {
-    fill: var(--grey-color-dark);
-  }
-  .site-nav input ~ .trigger {
-    clear: both;
-    display: none;
-  }
-  .site-nav input:checked ~ .trigger {
-    display: block;
-    padding-bottom: 5px;
-  }
-  .site-nav .page-link {
-    display: block;
-    padding: 5px 10px;
-    margin-left: 20px;
-  }
-  .site-nav .page-link:not(:last-child) {
-    margin-right: 0;
-  }
-}
-
-
-/**
- * Site footer
- */
 .site-footer {
   border-top: 1px solid var(--grey-color-light);
   padding: 1rem 0;
@@ -290,16 +221,6 @@ td {
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
-
-.social-media-list {
-  list-style: none;
-  margin-left: 0;
-}
-
-.footer-items > *:not(:first-child)::before {
-  content: ' • '
-}
-
 
 /**
  * Page content
