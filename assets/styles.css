@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:not(.inert-link) {
-	color: var(--text-color);
+	color: inherit;
 	transition: all 0.15s;
 	text-underline-offset: 0.1em;
 }
@@ -120,14 +120,18 @@ a:not(.inert-link):hover {
 
 blockquote {
   color: var(--text-color-dim);
-  border-left: 2px solid var(--text-color-dimmer);
+  border-left: 1px solid var(--text-color-dim);
   padding-left: 2rem;
   font-size: 1.125rem;
-  letter-spacing: -0.025em;
   font-style: italic;
 }
 blockquote > :last-child {
   margin-bottom: 0;
+}
+blockquote .source {
+  font-style: normal;
+  font-size: 1rem;
+  text-align: end;
 }
 
 pre,
@@ -140,13 +144,13 @@ code {
 
 code {
   border-radius: 3px;
-  background-color: #e9f1ec;
+  background: #e9f1ec;
   padding: 3px 3px;
 }
 
 pre code {
   border-radius: 0;
-  background-color: inherit;
+  background: none;
   padding: 0;
 }
 
