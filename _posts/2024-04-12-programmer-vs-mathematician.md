@@ -23,17 +23,17 @@ Well, let's see. Starting from 1988 the sequence would go:
   .kap-seq > * > * { display: table-cell; white-space: preserve }
 </style>
 
-<ul class="kap-seq">
-<li>1998<span> → </span>9881<span> − </span>1889<span> = </span>7992</li>
-<li>7992<span> → </span>9972<span> − </span>2799<span> = </span>7173</li>
-<li>7173<span> → </span>7731<span> − </span>1377<span> = </span>6354</li>
-<li>6354<span> → </span>6543<span> − </span>3456<span> = </span>3087</li>
-<li>3087<span> → </span>8730<span> − </span>0378<span> = </span>8352</li>
-<li>8352<span> → </span>8532<span> − </span>2358<span> = </span>6174</li>
-<li>6174<span> → </span>7641<span> − </span>1467<span> = </span>6174</li>
-<li>6174<span> → </span>7641<span> − </span>1467<span> = </span>6174</li>
-<li>…</li>
-</ul>
+<blockquote class="kap-seq">
+<div>1998<span> → </span>9881<span> − </span>1889<span> = </span>7992</div>
+<div>7992<span> → </span>9972<span> − </span>2799<span> = </span>7173</div>
+<div>7173<span> → </span>7731<span> − </span>1377<span> = </span>6354</div>
+<div>6354<span> → </span>6543<span> − </span>3456<span> = </span>3087</div>
+<div>3087<span> → </span>8730<span> − </span>0378<span> = </span>8352</div>
+<div>8352<span> → </span>8532<span> − </span>2358<span> = </span>6174</div>
+<div>6174<span> → </span>7641<span> − </span>1467<span> = </span>6174</div>
+<div>6174<span> → </span>7641<span> − </span>1467<span> = </span>6174</div>
+<div>…</div>
+</blockquote>
 
 
 Once we hit 6174 the sequence starts repeating, as the result of applying this "biggest digit-arrangement minus smallest digit-arrangement" operation to 6174, is 6174 itself.<span class="sidenote-number" /><span class="sidenote"> Or in maths parlance: 6174 is a [fixed point] of this operation.</span>
