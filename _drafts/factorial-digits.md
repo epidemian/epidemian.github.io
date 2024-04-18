@@ -17,11 +17,13 @@ Some time ago Vsauce [tweeted][vsauce tweet]:
 > {:.source}
 > — Vsauce (@tweetsauce) [February 18, 2018][vsauce tweet]
 
-So let's "prove" this by [once again][programming vs maths] writing a simple Ruby program that checks all possible numbers and tells us which ones have this property.
+Searching for these numbers on the <abbr title="The On-Line Encyclopedia of Integer Sequences">OEIS</abbr>, we find the sequence [A014080][factorion], which reveals that these numbers that are equal to the sum of the [factorials][factorial] of their digits are called **factorions**, and there are indeed only four of them (in base 10).
 
-The key here is to first realize that the numbers that have this property *must* be finite, as the numbers on the left of these equations grow faster than the sum of their digits' [factorials][factorial].
+Let's try to "prove" this by [once again][programming vs maths] writing a simple Ruby program that checks all possible numbers to confirm that these are the only four factorions.
 
-We can get an quick intuitive feel for this by comparing the numbers made of all 9s —that is, 9, 99, 999, and so on— to the sum of those 9s factorial —that is, $$9!$$, $$9!+9!$$, $$9!+9!+9!$$, and so on— and seeing which of the two is bigger. Note that $$9! = 362\,880$$.
+The key to the proof will be to first realize that there *must* be a finite number of factorions, as numbers themselves grow "faster" than the sum of the factorials of their digits. Which might be a bit counterintuitive at first, as factorials grow pretty fast.
+
+We can get an quick intuitive feel for this by comparing the numbers made of only 9s —that is, 9, 99, 999, and so on— to the sum of the factorials of those 9s —that is, $$9!$$, $$9!+9!$$, $$9!+9!+9!$$, and so on. By the way, $$9!$$ is $$362\,880$$.
 
 <span class="sidenote">Maybe the string formatting here warrants a comment. In Ruby, "multiplying" a string and number —that is, sending the `*` message with a number argument to a string—, like in `'9' * n`, returns a string with `n` copies of the original. Similarly, multiplying an array with a number, as in `['9!'] * n`, returns an array with the elements of the original repeated `n` times. And curiously, multiplying an array *with a string*, as in the second `*` of `['9!'] * n * ' + '`, is the same as [joining the elements](https://ruby-doc.org/3.3.0/Array.html#method-i-2A) of the array with that string. A somewhat cryptic choice, yes, but since we're dealing with factorials here, multiplying stuff together seemed appropriate.</span>
 
@@ -47,13 +49,13 @@ Which prints:
 9999999999 > 9! + 9! + 9! + 9! + 9! + 9! + 9! + 9! + 9! + 9!
 ```
 
-So, from $$9\,999\,999$$ onwards, the numbers made up of *n* consecutive 9s become bigger than the sum of *n* 9 factorials. And they seem to remain that way, at least up to 10 digits.
+So, from $$9\,999\,999$$ onwards, the numbers made up of $$n$$ consecutive 9s become bigger than the sum of $$n$$ factorials of 9. And they seem to remain that way, at least up to 10 digits.
 
-A more rigorous way of seeing this is to consider any number of *n* digits. The number itself grows exponentially with the number of digits<span class="sidenote-number" /><span class="sidenote">A consequence of using a [positional numeral system][positional notation].</span>, while the sum of its digits' factorials only grows linearly, as its value for a number of $$n$$ digits can be at most $$9! + 9! + \cdots + 9! + 9! = n9!$$.
+A more rigorous way of seeing this is to consider any number of $$n$$ digits. If we add a new digit to the number, it grows by a factor of 10<span class="sidenote-number" /><span class="sidenote">A consequence of using a [positional numeral system][positional notation].</span>, while the sum of it the factorials of its digits grows by at most $$9!$$. So, with each new digit, numbers grow exponentially, and so are bound to at some point get bigger than the sum of the factorials of their digits, as that sum only grows linearly with each new digit.
 
-And for 7 digits, we can see that that $$9\,999\,999$$ is already greater than $$7 \cdot 9! = 2\,540\,160$$, so we "only" need to check up to $$9\,999\,999$$ to find the possible numbers that are equal to the sum of their digits' factorials.
+And for 7 digits we can already see that $$9\,999\,999$$ is greater than $$7 \cdot 9! = 2\,540\,160$$. In fact it's is also greater than 8 or 9 times $$9!$$, the maximum sums for numbers of 8 and 9 digits. So at that point numbers are definitely greater than the sum of the factorials of their digits, which means that if we "only" check all numbers up to $$9\,999\,999$$, we can be sure to find all factorions on that range.
 
-Let the brute-forcing begin!
+Then let the brute-forcing begin!
 
 <span class="sidenote">Note the very succinct and cute factorial definition: `(1..n).reduce(1, :*)`. We're taking advantage of `reduce()` accepting both a block or a symbol for the reducer function. Given the `:*` symbol, `reduce()` combines the numbers `1..n` using their `*` method. In other words: it multiplies them together.</span>
 
@@ -77,7 +79,7 @@ Running this snippet, which takes around 6 seconds of number-crunching on my com
 40585 = 4! + 0! + 5! + 8! + 5!
 ```
 
-Which matches all the equations on the original Vsauce tweet.
+Which matches all the equations on the original Vsauce tweet. The four factorions have been found!
 
 Q.E.D
 
@@ -86,3 +88,4 @@ Q.E.D
 [programming vs maths]: {% post_url 2024-04-12-programmer-vs-mathematician %}
 [factorial]: https://en.wikipedia.org/wiki/Factorial
 [positional notation]: https://en.wikipedia.org/wiki/Positional_notation
+[factorion]: https://oeis.org/A014080
