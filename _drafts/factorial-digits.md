@@ -1,11 +1,11 @@
 ---
-title: "Sum of factorials tweet proof"
+title: "Sum of factorials tweet “proof”"
 layout: post
 tags: maths ruby
 ---
 
 Some time ago Vsauce [tweeted][vsauce tweet]:
-<!-- <span class="sidenote">It's been 6 years already?? Time got seriously messed up with the pandemic…</span> -->
+<!-- <span class="sidenote">It's been 6 years already!? Time got seriously messed up with the pandemic…</span> -->
 
 > 1 = 1!\
 > 2 = 2!\
@@ -17,15 +17,17 @@ Some time ago Vsauce [tweeted][vsauce tweet]:
 > {:.source}
 > — Vsauce (@tweetsauce) [February 18, 2018][vsauce tweet]
 
-Searching for these numbers on the <abbr title="The On-Line Encyclopedia of Integer Sequences">OEIS</abbr>, we find the sequence [A014080][factorion], which reveals that these numbers that are equal to the sum of the [factorials][factorial] of their digits are called **factorions**, and there are indeed only four of them (in base 10).
+Searching for these numbers on <abbr title="The On-Line Encyclopedia of Integer Sequences">OEIS</abbr>, we find the sequence [A014080][factorion], and learn that they are called **factorions**, defined as numbers equal to the sum of the [factorials][factorial] of their digits. And there are indeed only four of them (in base 10).
 
 Let's try to "prove" this by [once again][programming vs maths] writing a simple Ruby program that checks all possible numbers to confirm that these are the only four factorions.
 
-The key to the proof will be to first realize that there *must* be a finite number of factorions, as numbers themselves grow "faster" than the sum of the factorials of their digits. Which might be a bit counterintuitive at first, as factorials grow pretty fast.
+But which possible numbers? All of them? Do we just leave the computer checking bigger and bigger numbers until we get bored and declare that there must not be any more factorions if we haven't found a new one after an arbitrary limit? We couldn't call *that* a proof.
 
-We can get an quick intuitive feel for this by comparing the numbers made of only 9s —that is, 9, 99, 999, and so on— to the sum of the factorials of those 9s —that is, $$9!$$, $$9!+9!$$, $$9!+9!+9!$$, and so on. By the way, $$9!$$ is $$362\,880$$.
+We can try to get an intuition for how these sums behave by comparing the numbers made of only 9s (i.e., 9, 99, 999, and so on) to the sum of the factorials of those 9s (i.e., $$9!$$, $$9!+9!$$, $$9!+9!+9!$$, and so on).
 
-<span class="sidenote">Maybe the string formatting here warrants a comment. In Ruby, "multiplying" a string and number —that is, sending the `*` message with a number argument to a string—, like in `'9' * n`, returns a string with `n` copies of the original. Similarly, multiplying an array with a number, as in `['9!'] * n`, returns an array with the elements of the original repeated `n` times. And curiously, multiplying an array *with a string*, as in the second `*` of `['9!'] * n * ' + '`, is the same as [joining the elements](https://ruby-doc.org/3.3.0/Array.html#method-i-2A) of the array with that string. A somewhat cryptic choice, yes, but since we're dealing with factorials here, multiplying stuff together seemed appropriate.</span>
+<span class="sidenote">Note that $$9!$$ is $$362\,880$$.</span>
+
+<span class="sidenote">And maybe the string formatting here also warrants a comment. In Ruby, "multiplying" a string and number —that is, sending the `*` message with a number argument to a string—, like in `'9' * n`, returns a string with `n` copies of the original. Similarly, multiplying an array with a number, as in `['9!'] * n`, returns an array with the elements of the original repeated `n` times. And curiously, multiplying an array *with a string*, as in the second `*` of `['9!'] * n * ' + '`, is the same as [joining the elements](https://ruby-doc.org/3.3.0/Array.html#method-i-2A) of the array with that string. A somewhat cryptic choice, yes, but since we're dealing with factorials here, multiplying stuff together seemed appropriate.</span>
 
 ```ruby
 1.upto(10) do |n|
@@ -49,11 +51,11 @@ Which prints:
 9999999999 > 9! + 9! + 9! + 9! + 9! + 9! + 9! + 9! + 9! + 9!
 ```
 
-So, from $$9\,999\,999$$ onwards, the numbers made up of $$n$$ consecutive 9s become bigger than the sum of $$n$$ factorials of 9. And they seem to remain that way, at least up to 10 digits.
+So, from $$9\,999\,999$$ onwards, the numbers made of only 9s become bigger than the **sum of the factorials of their digits**, or **SFD** for short. And they seem to remain that way, at least up to 10 digits.
 
-A more rigorous way of seeing this is to consider any number of $$n$$ digits. If we add a new digit to the number, it grows by a factor of 10<span class="sidenote-number" /><span class="sidenote">A consequence of using a [positional numeral system][positional notation].</span>, while the sum of it the factorials of its digits grows by at most $$9!$$. So, with each new digit, numbers grow exponentially, and so are bound to at some point get bigger than the sum of the factorials of their digits, as that sum only grows linearly with each new digit.
+A more rigorous way of seeing this is to consider any number of $$n$$ digits. If we add a new digit to the number, it grows by a factor of 10<span class="sidenote-number" /><span class="sidenote">A consequence of using a [positional numeral system][positional notation].</span>, but its SFD grows by at most $$9!$$. In other words, with each new digit, numbers grow exponentially, while the SFD only grows linearly. This means that **there must be a finite number of factorions**, as the exponential growth of the numbers with each new digit will outpace the linear growth of the SFD at some point.
 
-And for 7 digits we can already see that $$9\,999\,999$$ is greater than $$7 \cdot 9! = 2\,540\,160$$. In fact it's is also greater than 8 or 9 times $$9!$$, the maximum sums for numbers of 8 and 9 digits. So at that point numbers are definitely greater than the sum of the factorials of their digits, which means that if we "only" check all numbers up to $$9\,999\,999$$, we can be sure to find all factorions on that range.
+And for 7 digits we can already see that $$9\,999\,999$$ is greater than $$7 \cdot 9! = 2\,540\,160$$. In fact it's even greater than 8 or 9 times $$9!$$, the maximum SFDs for numbers of 8 and 9 digits. So at that point numbers are definitely greater than their SFDs, which means that if we "only" check all numbers up to $$9\,999\,999$$, we can be sure to find all possible factorions.
 
 Then let the brute-forcing begin!
 
