@@ -4,6 +4,9 @@ layout: post
 tags: maths ruby
 ---
 
+<!-- TODO: Extract this into a reusable math.html snippet, or better yet: pre-render LaTeX. -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 Some time ago Vsauce [tweeted][vsauce tweet]:
 <!-- <span class="sidenote">It's been 6 years already!? Time got seriously messed up with the pandemic…</span> -->
 
