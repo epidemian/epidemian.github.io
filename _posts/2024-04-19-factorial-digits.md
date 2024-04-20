@@ -94,7 +94,7 @@ Q.E.D.
 
 Hmmm… 6 seconds to run that snippet. Isn't that… kind of slow?
 
-I mean, this has nothing to do with the proof, but modern computes can do many *billions* of instructions per second. And we're doing a linear search over only 10 million numbers. Even if some of the operations on that loop could be somewhat expensive, like calling the `digits` method to get the digits of a number, it *feels* like a computer should be able to run this much faster.
+I mean, this has nothing to do with the proof, but modern computers can do many *billions* of instructions per second. And we're doing a linear search over only 10 million numbers. Even if some of the operations on that loop could be somewhat expensive, like calling the `digits` method to get the digits of a number, it *feels* like a computer should be able to run this much faster.
 
 But that will be a topic for a following post!
 
