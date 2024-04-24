@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a:not(.inert-link) {
 	color: inherit;
-	transition: all 0.15s;
+	transition: all 0.1s;
 	text-underline-offset: 0.1em;
 }
 a:not(.inert-link):hover {
