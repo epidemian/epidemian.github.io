@@ -1,5 +1,5 @@
 ---
-title: "Programming vs mathematical curiosity"
+title: "Programming vs. mathematical curiosity"
 layout: post
 tags: maths ruby
 ---
