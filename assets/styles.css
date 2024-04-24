@@ -99,13 +99,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:not(.inert-link) {
-	color: inherit;
-	transition: all 0.1s;
-	text-underline-offset: 0.1em;
+  color: inherit;
+  transition: all 0.1s;
+  text-underline-offset: 0.1em;
 }
 a:not(.inert-link):hover {
-	text-underline-offset: 0.3em;
-	color: var(--accent-color);
+  text-underline-offset: 0.3em;
+  color: var(--accent-color);
 }
 .inert-link {
   text-decoration: none;
@@ -329,7 +329,7 @@ td {
 }
 
 .sidenote {
-	float: right;
+  float: right;
   clear: right;
   width: 48%;
   margin-right: -60%;
@@ -344,17 +344,17 @@ td {
 
 .sidenote-number::after {
   content: "[" counter(sidenote-counter) "]";
-	font-size: 11px;
-	position: relative;
-	top: -0.4rem;
-	margin-left: 0.2em;
+  font-size: 11px;
+  position: relative;
+  top: -0.4rem;
+  margin-left: 0.2em;
 }
 
 .sidenote-number + .sidenote::before {
   content: counter(sidenote-counter) ". ";
   white-space: pre;
-	position: absolute;
-	right: 100%;
+  position: absolute;
+  right: 100%;
 }
 
 /**
