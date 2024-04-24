@@ -277,12 +277,17 @@ td {
 }
 
 .post-meta {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--text-color-dim);
 }
 
 .post-meta > *:not(:first-child)::before {
-  content: ' ⸰ ';
+  content: ' — ';
+}
+
+.post-author {
+  font-size: 1.0625rem;
+  font-style: italic;
 }
 
 .post-link {
@@ -334,7 +339,7 @@ td {
   width: 48%;
   margin-right: -60%;
   margin-bottom: 1em;
-	font-size: 0.9rem;
+  font-size: 0.9rem;
   position: relative;
 }
 
