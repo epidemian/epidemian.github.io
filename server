@@ -1,4 +1,4 @@
 #!/bin/bash
 set -o errexit -o nounset -o pipefail
 
-jekyll serve --drafts
+jekyll serve --drafts --open-url
