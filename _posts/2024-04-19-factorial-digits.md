@@ -5,7 +5,7 @@ tags: maths ruby
 ---
 
 <!-- TODO: Extract this into a reusable math.html snippet, or better yet: pre-render LaTeX. -->
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 Many moons ago, Vsauce [tweeted][vsauce tweet]:
 
