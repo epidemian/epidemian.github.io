@@ -25,7 +25,7 @@ Let's try to "prove" this by [once again][programming vs maths] writing a simple
 
 But *which* possible numbers? All of them? Do we just leave the computer checking bigger and bigger numbers until we get bored and declare that there must not be any more factorions if we haven't found a new one after an arbitrary limit? We couldn't call *that* a proof.
 
-We can try to get an intuition for how these sums behave by comparing the numbers made of only 9s (i.e., 9, 99, 999, and so on) to the sum of the factorials of those 9s (i.e., $$9!$$, $$9!+9!$$, $$9!+9!+9!$$, and so on).
+We can try to get an intuition for how these sums behave by comparing the numbers made of only 9s (i.e., 9, 99, 999, and so on) to the sum of the factorials of those 9s (i.e., $$9!$$, $$9!{+}9!$$, $$9!{+}9!{+}9!$$, and so on).
 
 <span class="sidenote">Note that $$9!$$ is $$362\,880$$.</span>
 
