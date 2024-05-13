@@ -62,7 +62,7 @@ Oh and yes, method names can end with `?`, which is actually the convention for 
 
 Anyway, back to our program! This `repdigit?` definition is correct and works for numbers of any length. But we only care about 4-digit numbers. And Kaprekar's property also works for smaller numbers if we extend them with leading zeroes. For example, 777 is a repdigit, but if we consider it a 4-digit number and write it as 0777 then we can start the sequence with 7770&nbsp;-&nbsp;0777&nbsp;=&nbsp;6993 and we'd reach Kaprekar's constant in 3 more steps.
 
-So we only care about repdigits of 4 digits like 1111, 2222, and so on. In other words, multiples of 1111. So the `repdigit?` predicate can be simplified to:
+So we only care about repdigits of 4 digits like 1111, 2222, and so on. In other words, multiples of 1111:
 
 ```ruby
 def repdigit?(n) = n % 1111 == 0
