@@ -374,9 +374,20 @@ td {
   .post:has(.sidenote) {
     width: auto;
   }
-  /* TODO: show sidenotes on small screens */
-  .sidenote,
   .sidenote-number {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .sidenote {
+    display: none;
+  }
+  .sidenote.shown {
+    display: block;
+    float: left;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+  .sidenote.shown::before {
     display: none;
   }
 }
