@@ -160,7 +160,6 @@ pre {
   padding: 8px 16px;
   overflow-x: auto;
   border-left: 1px solid var(--text-color-dim);
-  overflow-x: auto;
 }
 
 .wrapper {
