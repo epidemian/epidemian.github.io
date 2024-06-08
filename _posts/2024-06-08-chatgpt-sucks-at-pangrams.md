@@ -241,7 +241,7 @@ I think we're being too generous to LLMs when we talk about what they do. That's
 And once we start thinking about an LLM as a text predictor, things start to make more sense:
 
 * It can claim that some phrase is a pangram because its training data included similar phrases on texts that talked about pangrams. It's not like it learned the general rule of what a pangram is or how to check if a phrase is a pangram or not.
-* It will generally give an answer after we ask a question because that's what its training corpus has. Answers are generally followed by questions.
+* It will generally give an answer after we ask a question because that's what its training corpus has. Questions are generally followed by answers.
 * It won't say "i don't know" because its training data doesn't have that many examples of questions being answered like that. People write about questions they have successfully answered. And when someone asks a question on the internet, they generally receive answers, not "i don't know"s. And that's the text the LLM has been trained on, so it makes sense for it to predict an answer-looking text after a question, even if the answer is incorrect.
 
 Maybe we're attributing a false cause for this capacity of LLMs to produce text.
@@ -258,7 +258,7 @@ This one is tricky. And i find myself torn between and optimistic and a pessimis
 
 On the one hand, i find it quite relieving to see that even the latest and most powerful "AI" models are still so far off from anything that we could call general intelligence with a straight face.
 
-I don't think we're anywhere close to <abbr title="Artificial general intelligence">AGI</abbr>, and i'm glad for that. I don't know if i'm an "AI doomer" or not, but i generally agree with the statement of [AGI posing an existential risk][AI risk statement] to humanity. I guess i could try to articulate why i think creating something more intelligent (and therefore more powerful) than ourselves seems like a spectacularly stupid idea, and i don't understand why anyone would want to do that instead of trying to improve humanity in some less naive and risky way<span class="sidenote-number" /><span class="sidenote">Like, IDK, trying to augment *human* intelligence, or our capacity for coordination, or for empathy.</span>, but this post too long already.
+I don't think we're anywhere close to <abbr title="Artificial general intelligence">AGI</abbr>, and i'm glad for that. I don't know if i'm an "AI doomer" or not, but i generally agree with the statement of [AGI posing an existential risk][AI risk statement] to humanity. I guess i could try to articulate why i think creating something more intelligent (and therefore more powerful) than ourselves seems like a spectacularly stupid idea, and i don't understand why anyone would want to do that instead of trying to improve humanity in some less naive and risky way<span class="sidenote-number" /><span class="sidenote">Like, IDK, trying to augment *human* intelligence, or our capacity for coordination, or for empathy.</span>, but this post is too long already.
 
 Suffice to say, any anxiety i may hold for AI killing us all gets subdued by evidence suggesting that we're still a long way off that. Even though this is contrary to what some AI-hype-bros may say.
 
