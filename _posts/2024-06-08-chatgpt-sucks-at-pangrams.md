@@ -4,7 +4,7 @@ layout: post
 tags: random-thoughts irony
 ---
 
-A chat with friends recently reminded me about pangrams, and what a cute little language curiosity they are.<span class="sidenote-number" /><span class="sidenote"> I also remembered that i never got a [self-enumerating pangram] generator to work. I should give that another try!</span> I thought it would be fun play with ChatGPT and see if it could generate some good ones. I expected it to do very well on this task. After all, <abbr title="Large Language Models">LLMs</abbr> should be excellent wordcels, right?<span class="sidenote-number" /><span class="sidenote">That is, they should score high on verbal intelligence. As apposed to "shape rotators", who have high visual/spatial intelligence. Yeah, i know [this meme][wordcels vs shape rotators] is kinda cringe, but i honestly find these terms ironically endearing.</span> Well, it doesn't seem so.
+A chat with friends recently reminded me about pangrams, and what a cute little language curiosity they are.<span class="sidenote-number" /><span class="sidenote"> I also remembered that i never got a [self-enumerating pangram] generator to work. I should give that another try!</span> I thought it would be fun play with ChatGPT and see if it could generate some good ones. I expected it to do very well on this task. After all, <abbr title="Large Language Models">LLMs</abbr> should be excellent wordcels, right?<span class="sidenote-number" /><span class="sidenote">That is, they should score high on verbal intelligence. As opposed to "shape rotators", who have high visual/spatial intelligence. Yeah, i know [this meme][wordcels vs shape rotators] is kinda cringe, but i honestly find these terms ironically endearing.</span> Well, it doesn't seem so.
 
 Just so we're on the same page: pangrams are phrases that use every letter of the alphabet. Even if you didn't know that definition, chances are you already knew of one such phrase: "the quick brown fox jumps over the lazy dog", which is typically used to showcase typographic fonts.
 
@@ -218,7 +218,7 @@ This pangram should include all the letters of the Spanish alphabet except "s".
 
 </details>
 
-At last, it manages to produce a phrase without an S as instructed. But once again it fails to include every other letter, while still confidently claiming to having done so.
+At last, it manages to produce a phrase without an S as instructed. But once again it fails to include every other letter, while still confidently claiming to have done so.
 
 I call it quits after this last attempt.
 
@@ -226,13 +226,13 @@ I call it quits after this last attempt.
 
 I don't know what to think about this little exercise in futility to be honest.
 
-One thing that is clear to me is that we're vastly overestimating the "intelligence" of LLMs, if it even makes sense to use that word on this context. We're being fooled by their apparent capacity to produce human-sounding text.
+One thing that is clear to me is that we're vastly overestimating the "intelligence" of LLMs, if it even makes sense to use that word in this context. We're being fooled by their apparent capacity to produce human-sounding text.
 
 This semblance of intelligence quickly falls apart when you start prodding the LLMs and they start "making mistakes" that no person would make. A person can easily check if a phrase contains all the letters in the alphabet, even if it's a phrase they've never seen before. Hell, even if the phrase is in a language they don't know. It's an easy task.
 
 But an LLM will make trivial errors while at the same time giving the impression of competently having done what you asked for.
 
-One thing LLMs seem incapable to do is to say "i don't know".
+One thing LLMs seem incapable of doing is to say "i don't know".
 
 ### On our mental model of LLMs
 
@@ -248,13 +248,13 @@ Maybe we're attributing a false cause for this capacity of LLMs to produce text.
 
 We humans have a rich internal mental model of the world. And we use that model to —among many other things— speak somewhat coherently about the world. So, in some way, the text we produce is *caused* by our internal world model.
 
-But when it comes to LLMs, we observe that they can produce text that is very similar to what we humans produce, and then we conclude that they must also have a rich internal model of the world in order to be able to produce that text. But maybe we're jumping to this conclusion too early. Maybe we're anthropomorphizing these things. There could be another mechanisms by which LLMs are able to produce that text.
+But when it comes to LLMs, we observe that they can produce text that is very similar to what we humans produce, and then we conclude that they must also have a rich internal model of the world in order to be able to produce that text. But maybe we're jumping to this conclusion too early. Maybe we're anthropomorphizing these things. There could be other mechanisms by which LLMs are able to produce that text.
 
 If we see a photocopier machine producing beautiful art, we don't jump to the conclusion that the photocopier has somewhat understood what makes great art and became an artist. No, we conclude that someone has put a beautiful image on its scanner. But this is because we understand how a photocopier works internally. But with LLMs we have the problem of them being quite black-boxy, or at least much more so than a photocopier.
 
 ### On what the future may hold
 
-This one is tricky. And i find myself torn between and optimistic and a pessimistic view.
+This one is tricky. And i find myself torn between an optimistic and a pessimistic view.
 
 On the one hand, i find it quite relieving to see that even the latest and most powerful "AI" models are still so far off from anything that we could call general intelligence with a straight face.
 
@@ -266,9 +266,9 @@ Remember: many of the people who are trying to sell you "AI" today are the same 
 
 On the other hand, however, i do worry about AI-hype-bros winning, and these dumb inscrutable black boxes known as LLMs being deployed for actually important stuff.
 
-And this is already happening to some extent. Google already provides "AI-based" results that regularly [make the same kind of basic mistake][AI search] illustrated on this blog post: confidently asserting something generated by a text predictor that's been trained on a huge corpus of Reddit posts.<span class="sidenote-number" /><span class="sidenote">Nothing against Reddit posts. I regularly add "site:reddit.com" to my Google searches when looking for stuff, especially opinions and reviews. But i also have the common sense to tell apart a geniune comment from a troll or a shitpost. These nuances seem completely opaque to an LLM, understandably so.</span> Mistakes that generally don't pass the sniff test of a well-informed person, let alone of an expert on a given field.
+And this is already happening to some extent. Google already provides "AI-based" results that regularly [make the same kind of basic mistake][AI search] illustrated on this blog post: confidently asserting something generated by a text predictor that's been trained on a huge corpus of Reddit posts.<span class="sidenote-number" /><span class="sidenote">Nothing against Reddit posts. I regularly add "site:reddit.com" to my Google searches when looking for stuff, especially opinions and reviews. But i also have the common sense to tell apart a genuine comment from a troll or a shitpost. These nuances seem completely opaque to an LLM, understandably so.</span> Mistakes that generally don't pass the sniff test of a well-informed person, let alone of an expert on a given field.
 
-I can only assume that unscrupulous job recruiters are already using similar models to filter out job applications. So these models may already be leaving people out of jobs. And we're trusting their overconfident token-prediction-based "judgement".
+I can only assume that unscrupulous job recruiters are already using similar models to filter out job applications. So these models may already be leaving people out of jobs. And we're trusting their overconfident token-prediction-based "judgment".
 
 This has real-world consequences; it's not just wrong pangrams.
 
