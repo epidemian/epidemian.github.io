@@ -14,7 +14,7 @@ Please take a moment and consider what would happen. Not necessarily to check it
 
 Well, let's see. Starting from 1988 the sequence would go:
 
-<div class="sidenote">Sidenote: if we had started from 2023 —the year i started writing and procrastinating this blog post— the sequence would look almost the same. The first step would be 3220&nbsp;−&nbsp;0223 =&nbsp;2997, and after that it would continue the same way. This is not such a cosmic coincidence as it seems; the numbers on these sequences tend to repeat a lot.</div>
+<span class="sidenote">Sidenote: if we had started from 2023 —the year i started writing and procrastinating this blog post— the sequence would look almost the same. The first step would be 3220&nbsp;−&nbsp;0223 =&nbsp;2997, and after that it would continue the same way. This is not such a cosmic coincidence as it seems; the numbers on these sequences tend to repeat a lot.</span>
 
 <!-- Hacky way of aligning the numbers in the sequence. Libre Baskerville doesn't have tabular numbers -->
 <style>
