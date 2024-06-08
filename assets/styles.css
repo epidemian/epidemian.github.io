@@ -65,7 +65,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure {
+ul, ol, dl, figure, details {
   /* Set `margin-bottom` to maintain vertical rhythm */
   margin-bottom: 1rem;
 }
@@ -214,6 +214,12 @@ th {
 }
 td {
   border: 1px solid var(--text-color-dimmest);
+}
+
+details summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-color-dim)
 }
 
 /**
