@@ -4,7 +4,7 @@ layout: post
 tags: random-thoughts irony
 ---
 
-A chat with friends recently reminded me about pangrams, and what a cute little language curiosity they are.<span class="sidenote-number" /><span class="sidenote"> I also remembered that i never got a [self-enumerating pangram] generator to work. I should give that another try!</span> I thought it would be fun play with ChatGPT and see if it could generate some good ones. I expected it to do very well on this task. After all, <abbr title="Large Language Models">LLMs</abbr> should be excellent wordcels, right?<span class="sidenote-number" /><span class="sidenote">Yeah, i know the "wordcels vs. shape rotators" meme is kinda cringe, but i honestly find these terms ironically endearing.</span> Well, it doesn't seem so.
+A chat with friends recently reminded me about pangrams, and what a cute little language curiosity they are.<span class="sidenote-number" /><span class="sidenote"> I also remembered that i never got a [self-enumerating pangram] generator to work. I should give that another try!</span> I thought it would be fun play with ChatGPT and see if it could generate some good ones. I expected it to do very well on this task. After all, <abbr title="Large Language Models">LLMs</abbr> should be excellent wordcels, right?<span class="sidenote-number" /><span class="sidenote">That is, they should score high on verbal intelligence. As apposed to "shape rotators", who have high visual/spatial intelligence. Yeah, i know [this meme][wordcels vs shape rotators] is kinda cringe, but i honestly find these terms ironically endearing.</span> Well, it doesn't seem so.
 
 Just so we're on the same page: pangrams are phrases that use every letter of the alphabet. Even if you didn't know that definition, chances are you already knew of one such phrase: "the quick brown fox jumps over the lazy dog", which is typically used to showcase typographic fonts.
 
@@ -280,6 +280,7 @@ In the meantime, let's remember to touch grass and connect with other people.
 
 
 [self-enumerating pangram]: https://en.wikipedia.org/wiki/Pangram#Self-enumerating_pangrams
+[wordcels vs shape rotators]: https://roonscape.ai/p/a-song-of-shapes-and-words
 [CoRecursive episode]: https://corecursive.com/hedy-with-felienne-hermans/
 [Hedy]: https://www.hedycode.com/
 [chanchuscript]: https://www.youtube.com/watch?v=PA_zfdH9pX0
