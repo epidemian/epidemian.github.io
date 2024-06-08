@@ -35,11 +35,13 @@ A classic example in Spanish is: "El veloz murciélago hindú comía feliz cardi
 
 I went with Spanish because, why not? It's nice when software understands your native language.<span class="sidenote-number" /><span class="sidenote"> In fact, maybe even programming languages should be designed to let people program in their mother tongue. Learning how to program when you're not fluent in English, or when your alphabet is not based on Latin, is more difficult and frustrating than it needs to be. A recent [CoRecursive episode] touches on this idea, and i found the guest's arguments to be very compelling. She created [Hedy], a language that allows students to learn programming using their native tongue. The breadth of languages it supports, from Spanish to Korean, is awe-inspiring :)</span> And, in any case, if it were true that LLMs have an internal model of the world, the output language shouldn't make much difference.
 
-So, ChatGPT starts with a good definition of what a pangram is, but then it botches the example badly. It doesn't include *many* letters: B, J, Ñ, P, Q, S, T, and X. This is because the sentence it chose is only half of a well-known Spanish pangram that also includes all diacritics:
+So, ChatGPT starts with a good definition of what a pangram is, but then it botches the example badly. It doesn't include *many* letters: B, J, Ñ, P, Q, S, T, and X.
+
+This is because the sentence it chose is only half of a well-known Spanish pangram that also includes all diacritics:
 
 > El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.
 
-At the moment i only noticed the missing Ñ, which is of course a very glaring omission to a Spanish speaker, as it's a very characteristic letter of the language. It even appears in its name!
+At the moment i only noticed the missing Ñ, which is of course a very glaring omission to a Spanish speaker, as it's a very characteristic letter of the language. It's even part of the language name!
 
 So i tell ChatGPT about that:
 
@@ -68,8 +70,7 @@ This pangram includes all the letters of the Spanish alphabet, including "ñ".
 
 </details>
 
-
-And it manages to quote a correct well-known pangram. Yay!
+It identifies that the phrase is indeed missing the Ñ (even though it's also missing many other letters), and it manages to quote a correct well-known pangram. Yay!
 
 Then i ask it to come up with a novel pangram:
 
