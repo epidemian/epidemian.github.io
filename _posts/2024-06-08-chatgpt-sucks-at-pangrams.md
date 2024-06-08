@@ -156,7 +156,7 @@ This pangram includes all the letters of the Spanish alphabet.
 
 In typical ChatGPT fashion, it spouts a lengthy answer that makes it seem like it's reasoning about which letters are missing from the previous pangram attempt.
 
-But it's wrong. It says the phrase was missing the H, K and S letters, when it clearly had an S (in the word "su"). It also missed the missing W.
+But it's wrong. It says the phrase was missing the H, K and S letters, when it clearly had an S (in the word "su"), and it failed to spot the missing W.
 
 Then it gives another incorrect pangram example while still confidently proclaiming it includes all Spanish letters.
 
