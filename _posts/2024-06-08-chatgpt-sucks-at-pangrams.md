@@ -10,28 +10,21 @@ Just so we're on the same page: pangrams are phrases that use every letter of th
 
 So, how did a state-of-the-art LLM like ChatGPT-4o fare with pangrams? Let's see:
 
-<style>pre{white-space:pre-wrap}</style>
-
-```
-Demian: hola, sabés lo que es un pangrama?
-
-ChatGPT: ¡Hola! Sí, un pangrama es una frase o texto que utiliza todas las letras del alfabeto de un idioma al menos una vez. Los pangramas se usan a menudo en pruebas de tipografía, diseño gráfico y en la enseñanza de la mecanografía.
-
-Un ejemplo clásico en español es: "El veloz murciélago hindú comía feliz cardillo y kiwi."
-```
-
-<details markdown=1>
-<summary>Translation (not really important; the chats are explained below)</summary>
-
-```
-Demian: hello, do you know what a pangram is?
-
-ChatGPT: Hello! Yes, a pangram is a phrase or text that uses all the letters of the alphabet of a language at least once. Pangrams are often used in typography tests, graphic design, and in teaching typing.
-
-A classic example in Spanish is: "El veloz murciélago hindú comía feliz cardillo y kiwi."
-```
-
-</details>
+{:.long}
+> Demian: hola, sabés lo que es un pangrama?
+>
+> ChatGPT: ¡Hola! Sí, un pangrama es una frase o texto que utiliza todas las letras del alfabeto de un idioma al menos una vez. Los pangramas se usan a menudo en pruebas de tipografía, diseño gráfico y en la enseñanza de la mecanografía.
+>
+> Un ejemplo clásico en español es: "El veloz murciélago hindú comía feliz cardillo y kiwi."
+>
+> <details markdown=1>
+> <summary>Translation (not really important; the chats are explained below)</summary>
+> Demian: hello, do you know what a pangram is?
+>
+> ChatGPT: Hello! Yes, a pangram is a phrase or text that uses all the letters of the alphabet of a language at least once. Pangrams are often used in typography tests, graphic design, and in teaching typing.
+>
+> A classic example in Spanish is: "El veloz murciélago hindú comía feliz cardillo y kiwi."
+> </details>
 
 I went with Spanish because, why not? It's nice when software understands your native language.<span class="sidenote-number" /><span class="sidenote"> In fact, maybe even programming languages should be designed to let people program in their mother tongue. Learning how to program when you're not fluent in English, or when your alphabet is not based on Latin, is more difficult and frustrating than it needs to be. A recent [CoRecursive episode] touches on this idea, and i found the guest's arguments to be very compelling. She created [Hedy], a language that allows students to learn programming using their native tongue. The breadth of languages it supports, from Spanish to Korean, is awe-inspiring :)</span> And, in any case, if it were true that LLMs have an internal model of the world, the output language shouldn't make much difference.
 
@@ -45,59 +38,49 @@ At the moment i only noticed the missing Ñ, which is of course a very glaring o
 
 So i tell ChatGPT about that:
 
-```
-Demian: no le falta una letra del español a ese pangrama?
-
-ChatGPT: Tienes razón, el ejemplo que di no incluye la letra "ñ". Un pangrama en español que sí utiliza todas las letras del alfabeto, incluida la "ñ", es:
-
-"Jovencillo emponzoñado de whisky: ¡qué figurota exhibe!"
-
-Este pangrama incluye todas las letras del alfabeto español, incluyendo la "ñ".
-```
-
-<details markdown=1>
-<summary>Translation</summary>
-
-```
-Demian: isn't that pangram missing a Spanish letter?
-
-ChatGPT: You're right, the example I gave does not include the letter "ñ". A pangram in Spanish that does use all the letters of the alphabet, including "ñ", is:
-
-"Jovencillo emponzoñado de whisky: ¡qué figurota exhibe!"
-
-This pangram includes all the letters of the Spanish alphabet, including "ñ".
-```
-
-</details>
+{:.long}
+> Demian: no le falta una letra del español a ese pangrama?
+>
+> ChatGPT: Tienes razón, el ejemplo que di no incluye la letra "ñ". Un pangrama en español que sí utiliza todas las letras del alfabeto, incluida la "ñ", es:
+>
+> "Jovencillo emponzoñado de whisky: ¡qué figurota exhibe!"
+>
+> Este pangrama incluye todas las letras del alfabeto español, incluyendo la "ñ".
+>
+> <details markdown=1>
+> <summary>Translation</summary>
+> Demian: isn't that pangram missing a Spanish letter?
+>
+> ChatGPT: You're right, the example I gave does not include the letter "ñ". A pangram in Spanish that does use all the letters of the alphabet, including "ñ", is:
+>
+> "Jovencillo emponzoñado de whisky: ¡qué figurota exhibe!"
+>
+> This pangram includes all the letters of the Spanish alphabet, including "ñ".
+> </details>
 
 It identifies that the phrase is indeed missing the Ñ (even though it's also missing many other letters), and it manages to quote a correct well-known pangram. Yay!
 
 Then i ask it to come up with a novel pangram:
 
-```
-Demian: bien. podrías armar un pangrama que no exista en la internet? no hace falta que sea muy breve
-
-ChatGPT: ¡Claro! Aquí tienes un pangrama en español que incluye todas las letras del alfabeto, incluyendo la "ñ":
-
-"El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
-
-Espero que te guste este pangrama original.
-```
-
-<details markdown=1>
-<summary>Translation</summary>
-
-```
-Demian: good. could you put together a pangram that does not exist on the internet? it doesn't have to be concise.
-
-ChatGPT: Sure! Here is a pangram in Spanish that includes all the letters of the alphabet, including the "ñ":
-
-"El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
-
-I hope you like this original pangram.
-```
-
-</details>
+{:.long}
+> Demian: bien. podrías armar un pangrama que no exista en la internet? no hace falta que sea muy breve
+>
+> ChatGPT: ¡Claro! Aquí tienes un pangrama en español que incluye todas las letras del alfabeto, incluyendo la "ñ":
+>
+> "El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
+>
+> Espero que te guste este pangrama original.
+>
+> <details markdown=1>
+> <summary>Translation</summary>
+> Demian: good. could you put together a pangram that does not exist on the internet? it doesn't have to be concise.
+>
+> ChatGPT: Sure! Here is a pangram in Spanish that includes all the letters of the alphabet, including the "ñ":
+>
+> "El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
+>
+> I hope you like this original pangram.
+> </details>
 
 Ok, not the most natural-sounding phrase.<span class="sidenote-number" /><span class="sidenote"> Roughly, "The small-nosed and jovial penguin, an expert in boxing, launched his effective checkmate to the fast witch of the volcano"</span> But fair enough, i didn't say anything about the phrase having to make much sense.
 
@@ -105,54 +88,49 @@ However, a keen eye will notice that this is not a pangram: it's missing the let
 
 So then i ask ChatGPT what i thought would be a trivial task: to identify which 3 letters are missing from that phrase:
 
-```
-Demian: le faltan 3 letras del castellano a ese intento de pangrama. qué letras le faltan?
-
-ChatGPT: Mis disculpas por el error. Revisaré el pangrama para identificar las letras que faltan.
-
-El pangrama proporcionado es:
-"El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
-
-Voy a revisar si incluye todas las letras del alfabeto español:
-- a, b, c, d, e, f, g, h, i, j, k, l, m, n, ñ, o, p, q, r, s, t, u, v, w, x, y, z
-
-Al revisar, noto que faltan las letras **h**, **k** y **s**. Intentaré nuevamente crear un pangrama completo:
-
----
-
-"El pingüino ñato y jovial husmeaba feliz, cuando la bruja rápida y excéntrica le dio un box con whisky."
-
----
-
-Este pangrama incluye todas las letras del alfabeto español.
-```
-
-<details markdown=1>
-<summary>Translation</summary>
-
-```
-Demian: that attempt at a pangram is missing 3 Spanish letters. what letters are missing?
-
-ChatGPT: My apologies for the error. I will review the pangram to identify the missing letters.
-
-The provided pangram is:
-"El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
-
-I'm going to check if it includes all the letters of the Spanish alphabet:
-- a, b, c, d, e, f, g, h, i, j, k, l, m, n, ñ, o, p, q, r, s, t, u, v, w, x, z
-
-Upon checking, I notice that the letters **h**, **k**, and **s** are missing. I'll try to create a complete pangram again:
-
----
-
-"El pingüino ñato y jovial husmeaba feliz, cuando la bruja rápida y excéntrica le dio un box con whisky."
-
----
-
-This pangram includes all the letters of the Spanish alphabet.
-```
-
-</details>
+{:.long}
+> Demian: le faltan 3 letras del castellano a ese intento de pangrama. qué letras le faltan?
+>
+> ChatGPT: Mis disculpas por el error. Revisaré el pangrama para identificar las letras que faltan.
+>
+> El pangrama proporcionado es:
+> "El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
+>
+> Voy a revisar si incluye todas las letras del alfabeto español:
+> - a, b, c, d, e, f, g, h, i, j, k, l, m, n, ñ, o, p, q, r, s, t, u, v, w, x, y, z
+>
+> Al revisar, noto que faltan las letras **h**, **k** y **s**. Intentaré nuevamente crear un pangrama completo:
+>
+> ---
+>
+> "El pingüino ñato y jovial husmeaba feliz, cuando la bruja rápida y excéntrica le dio un box con whisky."
+>
+> ---
+>
+> Este pangrama incluye todas las letras del alfabeto español.
+>
+> <details markdown=1>
+> <summary>Translation</summary>
+> Demian: that attempt at a pangram is missing 3 Spanish letters. what letters are missing?
+>
+> ChatGPT: My apologies for the error. I will review the pangram to identify the missing letters.
+>
+> The provided pangram is:
+> "El pingüino ñato y jovial, experto en boxeo, lanzó su eficaz jaque mate a la rápida bruja del volcán."
+>
+> I'm going to check if it includes all the letters of the Spanish alphabet:
+> - a, b, c, d, e, f, g, h, i, j, k, l, m, n, ñ, o, p, q, r, s, t, u, v, w, x, z
+>
+> Upon checking, I notice that the letters **h**, **k**, and **s** are missing. I'll try to create a complete pangram again:
+>
+> ---
+>
+> "El pingüino ñato y jovial husmeaba feliz, cuando la bruja rápida y excéntrica le dio un box con whisky."
+>
+> ---
+>
+> This pangram includes all the letters of the Spanish alphabet.
+> </details>
 
 In typical ChatGPT fashion, it spouts a lengthy answer that makes it seem like it's reasoning about which letters are missing from the previous pangram attempt.
 
@@ -166,57 +144,47 @@ But i think this is faulty reasoning on my part. I'm using a wrong mental model 
 
 Losing patience, i tell it about the missing Q on its last example, but then give it a more interesting task: to generate a phrase that contains all letters except S:
 
-```
-Demian: no incluye la Q. olvidate de eso. podés generar una frase que tenga todas las letras del castellano excepto la S?
-
-ChatGPT: Por supuesto, aquí tienes un pangrama en español que incluye todas las letras del alfabeto excepto la "s":
-
-"El pingüino ñato y jovial brinca feliz, comiendo kiwi y exquisito budín de limón."
-
-Este pangrama utiliza todas las letras del alfabeto español, excepto la "s".
-```
-
-<details markdown=1>
-<summary>Translation</summary>
-
-```
-Demian: it doesn't include the Q. forget about that. can you generate a phrase that has all the letters of Spanish except S?
-
-ChatGPT: Of course, here is a pangram in Spanish that includes all the letters of the alphabet except "s":
-
-"El pingüino ñato y jovial brinca feliz, comiendo kiwi y exquisito budín de limón."
-
-This pangram uses all the letters of the Spanish alphabet, except "s".
-```
-
-</details>
+{:.long}
+> Demian: no incluye la Q. olvidate de eso. podés generar una frase que tenga todas las letras del castellano excepto la S?
+>
+> ChatGPT: Por supuesto, aquí tienes un pangrama en español que incluye todas las letras del alfabeto excepto la "s":
+>
+> "El pingüino ñato y jovial brinca feliz, comiendo kiwi y exquisito budín de limón."
+>
+> Este pangrama utiliza todas las letras del alfabeto español, excepto la "s".
+>
+> <details markdown=1>
+> <summary>Translation</summary>
+> Demian: it doesn't include the Q. forget about that. can you generate a phrase that has all the letters of Spanish except S?
+>
+> ChatGPT: Of course, here is a pangram in Spanish that includes all the letters of the alphabet except "s":
+>
+> "El pingüino ñato y jovial brinca feliz, comiendo kiwi y exquisito budín de limón."
+>
+> This pangram uses all the letters of the Spanish alphabet, except "s".
+> </details>
 
 An obvious failure once again: the word "exquisito" has an S. I didn't even check if the phrase has all the other letters.
 
-```
-Demian: la palabra "exquisito" tiene una S
-
-ChatGPT: Tienes razón, me equivoqué. Aquí va otro intento:
-
-"El rápido murciélago ñoño volaba feliz comiendo kiwi, jabalí y pizza con budín."
-
-Este pangrama debería incluir todas las letras del alfabeto español excepto la "s".
-```
-
-<details markdown=1>
-<summary>Translation</summary>
-
-```
-Demian: the word "exquisito" has an S
-
-ChatGPT: You're right, I made a mistake. Here's another attempt:
-
-"El rápido murciélago ñoño volaba feliz comiendo kiwi, jabalí y pizza con budín."
-
-This pangram should include all the letters of the Spanish alphabet except "s".
-```
-
-</details>
+{:.long}
+> Demian: la palabra "exquisito" tiene una S
+>
+> ChatGPT: Tienes razón, me equivoqué. Aquí va otro intento:
+>
+> "El rápido murciélago ñoño volaba feliz comiendo kiwi, jabalí y pizza con budín."
+>
+> Este pangrama debería incluir todas las letras del alfabeto español excepto la "s".
+>
+> <details markdown=1>
+> <summary>Translation</summary>
+> Demian: the word "exquisito" has an S
+>
+> ChatGPT: You're right, I made a mistake. Here's another attempt:
+>
+> "El rápido murciélago ñoño volaba feliz comiendo kiwi, jabalí y pizza con budín."
+>
+> This pangram should include all the letters of the Spanish alphabet except "s".
+> </details>
 
 At last, it manages to produce a phrase without an S as instructed. But once again it fails to include every other letter, while still confidently claiming to have done so.
 

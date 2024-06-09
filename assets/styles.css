@@ -120,10 +120,16 @@ a:not(.inert-link):hover {
 
 blockquote {
   color: var(--text-color-dim);
-  border-left: 1px solid var(--text-color-dim);
-  padding-left: 2rem;
+  border-left: 3px solid var(--text-color-dimmer);
+  padding-left: min(2rem, 5%);
   font-size: 1.125rem;
   font-style: italic;
+}
+/* Use normal font-style and size for long-ish quotes. Too much text in italics
+gets distracting */
+blockquote.long {
+  font-style: normal;
+  font-size: 1rem;
 }
 blockquote > :last-child {
   margin-bottom: 0;
@@ -132,6 +138,12 @@ blockquote .source {
   font-style: normal;
   font-size: 1rem;
   text-align: end;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid var(--text-color-dimmer);
+	margin: 1rem 0;
 }
 
 pre,
