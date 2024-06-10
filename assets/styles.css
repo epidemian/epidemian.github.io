@@ -121,7 +121,7 @@ a:not(.inert-link):hover {
 blockquote {
   color: var(--text-color-dim);
   border-left: 3px solid var(--text-color-dimmer);
-  padding-left: min(2rem, 5%);
+  padding-left: min(1.5rem, 5%);
   font-size: 1.125rem;
   font-style: italic;
 }
@@ -152,26 +152,24 @@ code {
   /* JetBrains Mono has beautiful ligatures, but it makes more sense for a blog
   to have discernible characters. */
   font-variant-ligatures: none;
+  background: #f0f6f2;
+  border-radius: 3px;
 }
 
 code {
-  border-radius: 3px;
-  background: #e9f1ec;
   padding: 3px 3px;
 }
 
 pre code {
-  border-radius: 0;
   background: none;
+  border-radius: 0;
   padding: 0;
 }
 
 pre {
   line-height: 1.5;
-  background-color: #f0f6f2;
-  padding: 8px 16px;
   overflow-x: auto;
-  border-left: 1px solid var(--text-color-dim);
+  padding: 0.5rem 1rem;
 }
 
 .wrapper {
