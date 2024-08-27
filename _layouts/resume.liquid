@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% assign resume = site.data[page.resume_key] %}
+
+<article class="resume">
+
+  <header>
+    <h1>Demian Ferreiro</h1>
+    <span class=subtitle>{{ resume.title }}</span>
+  </header>
+
+  {%- for section in resume.sections -%}
+    <h2>{{ section.title }}</h2>
+    {%- for item in section.items -%}
+      <h3>
+        {%- if item.link -%}
+          <a href="{{ item.link }}">{{ item.company }}</a>
+        {%- else -%}
+          {{ item.company }}
+        {%- endif -%}
+      </h3>
+      <p><strong>{{ item.role }}</strong>, {{ item.location }}, {{ item.time }}</p>
+      {{ item.description | markdownify }}
+    {%- endfor -%}
+  {%- endfor -%}
+
+</article>
