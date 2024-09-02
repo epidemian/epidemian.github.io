@@ -5,7 +5,7 @@
 
   <body>
 
-    {%- include header.html -%}
+    {%- unless page.bare_layout -%}{%- include header.html -%}{%- endunless -%}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -13,7 +13,7 @@
       </div>
     </main>
 
-    {%- include footer.html -%}
+    {%- unless page.bare_layout -%}{%- include footer.html -%}{%- endunless -%}
 
     <script>
       // TODO: use the hidden checkbox trick to make sidenote toggles work
