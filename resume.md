@@ -1,6 +1,6 @@
 ---
 layout: resume
 bare_layout: yes
-title: Résumé
+title: Demian Ferreiro's Résumé
 resume_key: resume_en
 ---
