@@ -6,23 +6,34 @@ layout: default
 
 <style>
 body:has(.resume) .wrapper {
-  /* max-width: calc(1040px * 0.8); */
+  max-width: 800px;
 }
-.xp-item h3 {
-  display: flex;
-  align-items: baseline;
-  border-bottom: 1px solid var(--text-color-dimmer);
+.resume h1 { font-size: 2rem; margin-bottom: 3rem; }
+.resume h2 { font-size: 1.5rem; margin-top: 2rem; }
+.resume h3 { font-size: 1.18rem; margin-top: 2rem; }
+.resume li { margin-bottom: 0.5rem; }
+.resume .subtitle {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--text-color-dim);
 }
-.xp-item h3 small {
-  margin-left: auto;
+.resume .time {
   font-size: 1rem;
   font-weight: normal;
   color: var(--text-color-dim);
 }
-.resume h1 { font-size: 2rem; }
-.resume h2 { font-size: 1.5rem; }
-.resume h3 { font-size: 1.18rem; }
-.resume h2, .resume h3 { margin-top: 2rem; }
+.resume .wide-heading {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-color-dimmer);
+}
+.resume .wide-heading :last-child {
+  margin-left: auto;
+}
 .resume .techs {
   font-size: 0.9rem;
   color: var(--text-color-dim);
@@ -30,25 +41,22 @@ body:has(.resume) .wrapper {
 </style>
 
 <div class="resume">
-
-  <header>
-    <h1>Demian Ferreiro</h1>
-  </header>
-
+  <h1 class="wide-heading">
+    Demian Ferreiro
+    <span class="subtitle">{{ resume.subtitle }}</span>
+  </h1>
   {%- for section in resume.sections -%}
-    <h2>{{ section.title }}</h2>
+    {% if section.title %}<h2>{{ section.title }}</h2>{% endif %}
     {{ section.content | markdownify }}
     {%- for item in section.items -%}
-      <div class="xp-item">
-        <h3>
-          <span>{{ item.role }}, {{ item.org }}</span>
-          <small class="date">
-            {{ "" | split: "" | push: item.location | push: item.time | compact | join: ", " }}
-          </small>
-        </h3>
-        {{ item.description | markdownify }}
-        <p class="techs">{{ item.buzzwords | join: ' · ' }}</p>
-      </div>
+      <h3 class="wide-heading">
+        <span>{{ item.role }}, {{ item.org }}</span>
+        <small class="time">
+          {{ "" | split: "" | push: item.location | push: item.time | compact | join: ", " }}
+        </small>
+      </h3>
+      {{ item.description | markdownify }}
+      <p class="techs">{{ item.buzzwords | join: ' · ' }}</p>
     {%- endfor -%}
   {%- endfor -%}
 

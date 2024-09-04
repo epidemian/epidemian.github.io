@@ -9,9 +9,9 @@ sections:
 
       I've worked in teams of many sizes, from tiny startups where I was the sole developer of the whole backend, to big organizations where the coordination between hundreds of developers was a big challenge. And from greenfield projects to maintenance and modernization of legacy systems.
 
-      ### Skills, or what I do...
-
-      - Develop complex web applications using the modern React-centric approach.
+  - title: Skills, or what I do...
+    content: |
+      - Develop complex web applications using the "modern" React-centric approach.
       - Prefer writing "classic" web pages —with server-side rendered HTML, CSS, and vanilla JavaScript— when interactivity is low and the complexity of JS frameworks is not justified.
       - Develop and deploy backend services.
       - Work with other developers to design complex systems. And always keep an eye on opportunities to reduce incidental complexity.
