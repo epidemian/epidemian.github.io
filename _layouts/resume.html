@@ -8,7 +8,7 @@ layout: default
 body:has(.resume) .wrapper {
   max-width: 800px;
 }
-.resume h1 { font-size: 2rem; margin-bottom: 3rem; }
+.resume h1 { font-size: 2rem; }
 .resume h2 { font-size: 1.5rem; margin-top: 2rem; }
 .resume h3 { font-size: 1.18rem; margin-top: 2rem; }
 .resume li { margin-bottom: 0.5rem; }
@@ -46,7 +46,7 @@ body:has(.resume) .wrapper {
     <span class="subtitle">{{ resume.subtitle }}</span>
   </h1>
   {%- for section in resume.sections -%}
-    {% if section.title %}<h2>{{ section.title }}</h2>{% endif %}
+    {% if section.title %}<h2 id="{{ section.slug }}">{{ section.title }}</h2>{% endif %}
     {{ section.content | markdownify }}
     {%- for item in section.items -%}
       <h3 class="wide-heading">
