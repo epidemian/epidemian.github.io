@@ -37,7 +37,7 @@ body:has(.resume) .wrapper {
 
   {%- for section in resume.sections -%}
     <h2>{{ section.title }}</h2>
-    {{ section.md | markdownify }}
+    {{ section.content | markdownify }}
     {%- for item in section.items -%}
       <div class="xp-item">
         <h3>
