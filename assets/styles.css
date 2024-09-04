@@ -142,8 +142,20 @@ blockquote .source {
 
 hr {
 	border: none;
-	border-top: 1px solid var(--text-color-dimmer);
+  color: var(--text-color);
+  text-align: center;
+  font-size: 4rem;
 	margin: 1rem 0;
+}
+hr::after {
+  content: '☙❧';
+}
+/* Use a more discrete <hr> inside quotes, instead of a full-on fleuron */
+blockquote hr {
+  border-top: 1px solid var(--text-color-dimmer);
+}
+blockquote hr::after {
+  content: none;
 }
 
 pre,
