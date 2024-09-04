@@ -56,10 +56,10 @@ sections:
           This was a huge learning experience, not only in acclimatizing to remote work (before the Covid pandemic), but also working on a big organization with a lot of "product" complexities.
           TODO: Mention interviewing, integrated chat, architecture initiatives (real-time updates through websockers)
         buzzwords: [JavaScript, React, react-testing-library, Apollo GraphQL, WebSockets, Figma, Ruby, Ruby on Rails, Cucumber, Docker]
-      - role: Senior Web developer
+      - role: Full-stack developer
         org: <a href="https://www.linkedin.com/company/restorando.com">Restorando</a>
         location: Buenos Aires
-        time: 2016 – 2019
+        time: Oct 2016 – Apr 2019
         description: |
           Worked on the restaurant booking platform as a full stack web developer and technical lead. Contributed mainly to the development and architecture of a new web frontend written in the "JS centric" way, with React/Redux, and a GraphQL layer that interfaced different APIs and served both the web and the mobile native apps. I also participated in other backend projects written in Ruby/Rails, as well as more "classic" fronted web projects. It was a great learning experience.
           TODO: Mention interviewing, "product" design participation, Elasticsearch service, talks.
@@ -67,14 +67,14 @@ sections:
       - role: Full-stack web developer
         org: TripMate
         location: Buenos Aires
-        time: 2016
+        time: Nov 2015 – Oct 2016
         description: |
           Developed a tourism web application from the ground up with two colleagues. A truly full-stack and architecture-design experience. The back-end was a simple Ruby/Sinatra API while the front-end was a JavaScript application that used Mithril.js as a lightweight view layer. Though the project/startup didn't lift off in the end, it was a very valuable and fun endeavor.
         buzzwords: [JavaScript, Mithril.js, Ruby, Sinatra, REST, Heroku]
       - role: Freelance developer
         org: <a href="https://www.linkedin.com/company/stash-beauty/">Stash Beauty</a>
         location: remote
-        time: 2015 – 2016
+        time: Mar 2015 – Jul 2016
         description: |
           Maintained and developed a REST API for a mobile application, as well as a simple marketing website and an administration website. The server was programmed in Python and run on the Google App Engine platform.
         buzzwords: [Python, Django, Google App Engine, NoSQL]
