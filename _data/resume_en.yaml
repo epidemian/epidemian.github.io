@@ -1,6 +1,19 @@
-layout: resume
 title: Résumé
 sections:
+  - title: Summary
+    md: |
+      I'm a software developer with more than 15 years of professional experience, most recently working on web applications, as well as backend services and technical leadership.
+  - title: Contact
+    md: |
+      - <epidemian@gmail.com>
+      - <https://demian.ferrei.ro>
+      - GitHub: <https://github.com/epidemian>
+      - Location: Bariloche, Argentina (GMT-3)
+  - title: Selected projects
+    md: |
+      - [URL Snake](https://demian.ferrei.ro/snake): a silly snake game that can be played in the browser URL.
+      - [λ-Espresso](https://demian.ferrei.ro/lambda-espresso/): an online lambda calculus interpreter.
+      - <abbr title="Advent of Code">AoC</abbr> solutions for years [2020](https://github.com/epidemian/advent-of-code-2020) (in Ruby), [2021](https://github.com/epidemian/advent-of-code-2021), [2022](https://github.com/epidemian/advent-of-code-2022) and [2023](https://github.com/epidemian/advent-of-code-2023) (in Rust). Done for fun and to hone my skills in these languages. I tried to write "good" code and journal my learnings. Getting to 100% completion was a great challenge :)
   - title: Professional Experience
     items:
       - role: Senior Front-end Engineer
@@ -12,7 +25,7 @@ sections:
 
           This was a huge learning experience, not only in acclimatizing to remote work (before the Covid pandemic), but also working on a big organization with a lot of "product" complexities.
         buzzwords: [JavaScript, React, react-testing-library, Apollo GraphQL, WebSockets, Figma, Ruby, Ruby on Rails, Cucumber, Docker]
-      - role: Web developer
+      - role: Senior Web developer
         org: <a href="https://www.linkedin.com/company/restorando.com">Restorando</a>
         location: Buenos Aires
         time: 2016 to 2019
@@ -32,7 +45,7 @@ sections:
         time: 2015 to 2016
         description: |
           Maintained and developed a REST API for a mobile application, as well as a simple marketing website and an administration website. The server was programmed in Python and run on the Google App Engine platform.
-        buzzwords: [Python, Django, Google App Engine]
+        buzzwords: [Python, Django, Google App Engine, NoSQL]
       - role: Web developer
         org: Sumavisos / <a href="https://www.properati.com.ar/">Properati</a>
         location: Buenos Aires
@@ -47,29 +60,27 @@ sections:
         description: |
           Worked on many varied projects on a software consulting company. Among others: some mobile Android/Java apps, a Groovy/Grails medium-sized project, a couple of small but fun Ruby/Sinatra web projects, a mobile web PhoneGap application, and even a "smart" TV app.
         buzzwords: [Java, Android, Groovy, Grails, Ruby, Sinatra, Heroku, JavaScript, PhoneGap]
-      - role: Java Programmer
+      - role: Jr Java Programmer
         org: <a href="https://www.creativecoefficient.net/">Creative Coefficient SRL</a>
         location: Buenos Aires
         time: 2011
         description: |
           Developed an access-control application for organizations. Used some of the most "EE" parts of Java: JBoss Seam Framework, RichFaces/JSF, Hibernate/JPA and the JBoss application server.
         buzzwords: [Java, JBoss Seam, RichFaces, JSF, Hibernate]
-      - role: Flash games developer
+      - role: Flash games programmer
         org: <a href="https://www.linkedin.com/company/e-volution">e-volution</a>
         location: Buenos Aires
         time: 2008 to 2010
         description: |
           For my first job as a programmer I had the fortune of developing video games. Even though they were Flash games, it was a ton of fun.
         buzzwords: [Flash, ActionScript 3]
-  - title: Education
+  - title: Education & Teaching
     items:
       - role: Software Engineering
         org: Universidad de Buenos Aires
         time: 2006 to 2011
         description: |
           A 6-year career program comparable to a master's degree, with a focus on natural sciences, maths, programming, and software design. I ended dropping out at around 2/3rds into the program, but learning a ton.
-  - title: Teaching
-    items:
       - role: Collaborator
         org: Universidad de Buenos Aires
         time: 2009 to 2010, 2021
