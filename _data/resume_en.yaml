@@ -1,4 +1,4 @@
-title: Résumé
+subtitle: Résumé/CV
 sections:
   - content: |
       I'm a software developer with more than 15 years of professional experience, most recently working on web applications, as well as backend services and technical leadership.
@@ -34,21 +34,29 @@ sections:
       - <abbr title="Advent of Code">AoC</abbr> solutions for years [2020](https://github.com/epidemian/advent-of-code-2020) (in Ruby), [2021](https://github.com/epidemian/advent-of-code-2021), [2022](https://github.com/epidemian/advent-of-code-2022) and [2023](https://github.com/epidemian/advent-of-code-2023) (in Rust). Done for fun and to hone my skills in these languages. I tried to write "good" code and journal my learnings. Getting to 100% completion was a great challenge :)
   - title: Professional Experience
     items:
+      - role: Sabbatical
+        org: Personal projects
+        time: Jun 2022 – present
+        description: |
+          Decided to take some time off professional software development after feeling quite burned out. Started writing on [my blog](/blog). Worked on some temporary part-time jobs, like teaching rock climbing on a local club and driving and Uber. Also did some recreational programming on personal projects.
+        buzzwords: []
       - role: Senior Front-end Engineer
         org: <a href="https://www.toptal.com/">Toptal</a>
         location: remote
-        time: 2019 to 2022
+        time: May 2019 – Jun 2022
         description: |
           My first fully remote and distributed experience, on one of the leading freelancing platforms worldwide. I worked mainly as a "modern" web front-end developer —i.e. React centric— for both the client-facing and the freelancer-facing applications. I was also lucky to contribute to other areas on the tech stack, like the classic monolithic Ruby on Rails backend, or the end-to-end Cucumber-defined test suite.
 
           This was a huge learning experience, not only in acclimatizing to remote work (before the Covid pandemic), but also working on a big organization with a lot of "product" complexities.
+          TODO: Mention interviewing, integrated chat, architecture initiatives (real-time updates through websockers)
         buzzwords: [JavaScript, React, react-testing-library, Apollo GraphQL, WebSockets, Figma, Ruby, Ruby on Rails, Cucumber, Docker]
       - role: Senior Web developer
         org: <a href="https://www.linkedin.com/company/restorando.com">Restorando</a>
         location: Buenos Aires
-        time: 2016 to 2019
+        time: 2016 – 2019
         description: |
           Worked on the restaurant booking platform as a full stack web developer and technical lead. Contributed mainly to the development and architecture of a new web frontend written in the "JS centric" way, with React/Redux, and a GraphQL layer that interfaced different APIs and served both the web and the mobile native apps. I also participated in other backend projects written in Ruby/Rails, as well as more "classic" fronted web projects. It was a great learning experience.
+          TODO: Mention interviewing, "product" design participation, Elasticsearch service, talks.
         buzzwords: [JavaScript, React, Redux, GraphQL, Node.js, Ruby, Ruby on Rails, Elasticsearch, Docker, Kubernetes, AWS]
       - role: Full-stack web developer
         org: TripMate
@@ -60,21 +68,21 @@ sections:
       - role: Freelance developer
         org: <a href="https://www.linkedin.com/company/stash-beauty/">Stash Beauty</a>
         location: remote
-        time: 2015 to 2016
+        time: 2015 – 2016
         description: |
           Maintained and developed a REST API for a mobile application, as well as a simple marketing website and an administration website. The server was programmed in Python and run on the Google App Engine platform.
         buzzwords: [Python, Django, Google App Engine, NoSQL]
       - role: Web developer
         org: Sumavisos / <a href="https://www.properati.com.ar/">Properati</a>
         location: Buenos Aires
-        time: 2013 to 2015
+        time: 2013 – 2015
         description: |
           Worked on two medium-sized projects for Sumavisos: an existing jobs web portal, and a new restaurant booking website. Later on I worked on the real-estate site Properati. All these projects had similar architectures, using Ruby/Rails on the back-end, while the front-end was a classic server-rendered HTML site with JS sprinkled in.
         buzzwords: [Ruby, Rails, Sequel, JavaScript, jQuery]
       - role: Developer
         org: <a href="https://fdvsolutions.com">FDV Solutions</a>
         location: Buenos Aires
-        time: 2011 to 2013
+        time: 2011 – 2013
         description: |
           Worked on many varied projects on a software consulting company. Among others: some mobile Android/Java apps, a Groovy/Grails medium-sized project, a couple of small but fun Ruby/Sinatra web projects, a mobile web PhoneGap application, and even a "smart" TV app.
         buzzwords: [Java, Android, Groovy, Grails, Ruby, Sinatra, Heroku, JavaScript, PhoneGap]
@@ -88,7 +96,7 @@ sections:
       - role: Flash games programmer
         org: <a href="https://www.linkedin.com/company/e-volution">e-volution</a>
         location: Buenos Aires
-        time: 2008 to 2010
+        time: 2008 – 2010
         description: |
           For my first job as a programmer I had the fortune of developing video games. Even though they were Flash games, it was a ton of fun.
         buzzwords: [Flash, ActionScript 3]
@@ -96,30 +104,14 @@ sections:
     items:
       - role: Software Engineering
         org: Universidad de Buenos Aires
-        time: 2006 to 2011
+        time: 2006 – 2011
         description: |
           A 6-year career program comparable to a master's degree, with a focus on natural sciences, maths, programming, and software design. I ended dropping out at around 2/3rds into the program, but learning a ton.
       - role: Collaborator
         org: Universidad de Buenos Aires
-        time: 2009 to 2010, 2021
+        time: 2009 – 2010, 2021
         description: |
           While at uni, I worked as an ad honorem professor on the "Algoritmos y Programción II" course, which teaches intermediate programming concepts. In 2020 I got back as a collaborator on the "Algoritmos y Programción III" course, which focused on OOP and was taught remotely due to the Covid pandemic.
 
-  # - title: Languages
-  #   items:
-  #     - title: English
-  #       description: Fluent
-  #     - title: Spanish
-  #       description: Native
-  # - title: Skills
-  #   items:
-  #     - title: Favorites
-  #       description: Ruby, the "classic" web stack (HTML, CSS \& JS), as well as the "modern" web with TypeScript and React (preferably when well justified), and recently Rust too.
-  #     - title: Other languages & tools
-  #       description: Bash, git, SQL, Python, Java, C/C++, \LaTeX. And many web framewroks and libraries, but those come and go :)
-
-# TODO: Add contact information
-# email: epidemian@gmail.com
-# site: https://demian.ferrei.ro/
-# location: Bariloche, Argentina (GMT-3)
-# GitHub: https://github.com/epidemian
+  - content: |
+      **Last update:** September 2024
