@@ -142,20 +142,21 @@ blockquote .source {
 
 hr {
 	border: none;
-  color: var(--text-color);
-  text-align: center;
-  font-size: 4rem;
 	margin: 1rem 0;
+  height: 7rem;
+  background: var(--text-color);
+  /* This should just be a hr::after{content:'☙❧'} rule, but browsers don't
+  render this consistently, so use an SVG image instead. The SVG was generated
+  from the "☙❧" text using https://danmarshall.github.io/google-font-to-svg-path/
+  and the FreeSerif font. Using the `mask` property instead of `background`
+  allows changing the color via CSS using the `background` property. */
+  mask: center no-repeat url('/assets/images/fleuron.svg');
 }
-hr::after {
-  content: '☙❧';
-}
-/* Use a more discrete <hr> inside quotes, instead of a full-on fleuron */
+/* Use a more discrete <hr> inside quotes */
 blockquote hr {
+  height: 0;
+  mask: none;
   border-top: 1px solid var(--text-color-dimmer);
-}
-blockquote hr::after {
-  content: none;
 }
 
 pre,
