@@ -1,4 +1,5 @@
 ---
+lang: es
 layout: resume
 bare_layout: true
 title: Demian Ferreiro, Curriculum Vitae
