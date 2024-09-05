@@ -15,6 +15,7 @@
     - Interviewed engineering candidates for front-end roles.
     - Developed a chat component for communication between freelancers and their clients. One of the first "real-time updates" projects in the company (i.e. app reacting to server events).
     - Designed an architecture proposal for a unified "real-time updates" solution across all company applications. Based on an event bus and WebSockets.
+    - Gave a "workshop" for learning how to solve the Rubik's cube during a team offsite meetup. At least 3 teammates learned the whole thing that day.
   buzzwords: [JavaScript, React, react-testing-library, Apollo GraphQL, WebSockets, Figma, Ruby, Ruby on Rails, Cucumber, Docker]
 - role: Full-stack developer
   org: <a href="https://www.linkedin.com/company/restorando.com">Restorando</a>
