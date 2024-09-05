@@ -1,0 +1,12 @@
+subtitle: Curriculum Vitae
+sections:
+  - content: |
+      TODO, ver [versión en inglés](/resume).
+
+  - title: Contacto
+    slug: contacto
+    content: |
+      - <epidemian@gmail.com>
+      - <https://demian.ferrei.ro>
+      - GitHub: <https://github.com/epidemian>
+      - Ubicación: Bariloche, Argentina (GMT-3)
