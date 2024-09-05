@@ -10,19 +10,20 @@ body:has(.resume) .wrapper {
 .resume h2 { font-size: 1.5rem; margin-top: 2rem; }
 .resume h3 { font-size: 1.18rem; margin-top: 2rem; }
 .resume li { margin-bottom: 0.5rem; }
-.resume .subtitle {
+.resume h1 small {
+  font-size: 1.5rem;
   font-weight: normal;
   font-style: italic;
-  font-size: 1.5rem;
   color: var(--text-color-dim);
 }
-.resume .time {
+.resume h3 small {
   font-size: 1rem;
   font-weight: normal;
   color: var(--text-color-dim);
   font-variant-ligatures: initial;
 }
-.resume .wide-heading {
+.resume h1,
+.resume h3 {
   display: flex;
   flex-flow: row wrap;
   gap: 0 1rem;
@@ -30,7 +31,8 @@ body:has(.resume) .wrapper {
   justify-content: space-between;
   border-bottom: 1px solid var(--text-color-dimmer);
 }
-.resume .wide-heading :last-child {
+.resume h1 :last-child,
+.resume h3 :last-child {
   margin-left: auto;
 }
 .resume .techs {

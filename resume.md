@@ -5,7 +5,7 @@ title: Demian Ferreiro's Résumé/CV
 override_head_title: true
 ---
 
-<h1 class="wide-heading">Demian Ferreiro<span class="subtitle">Résumé/CV</span></h1>
+# Demian Ferreiro <small>Résumé/CV</small>
 
 **Go to:** [Contact](#contact) \| [Projects](#projects) \| [Skills](#skills) \| [Experience](#work) \| [Education](#education)<br><br>
 
@@ -41,26 +41,25 @@ I've worked in teams of many sizes, from tiny startups where I was the sole deve
 
 ## Professional Experience {#work}
 
-{% for item in site.data.resume_en.jobs %}
-<h3 class="wide-heading">
-  <span>{{ item.role }}, {{ item.org }}</span>
-  <small class="time">
-    {{ "" | split: "" | push: item.location | push: item.time | compact | join: ", " }}
-  </small>
+{% for job in site.data.jobs %}
+<h3>
+  <span>{{ job.role }}, {{ job.org }}</span>
+  <small>{{ "" | split: "" | push: job.location | push: job.time | compact | join: ", " }}</small>
 </h3>
-{{ item.description }}
-<p class="techs">{{ item.buzzwords | join: ' · ' }}</p>
+{{ job.description }}
+<p class="techs">{{ job.buzzwords | join: ' · ' }}</p>
 {% endfor %}
 
 ## Education & Teaching {#education}
 
-{% for item in site.data.resume_en.edu %}
-<h3 class="wide-heading">
-  <span>{{ item.role }}, {{ item.org }}</span>
-  <small class="time">{{ item.time }}</small>
-</h3>
-{{ item.description }}
-{% endfor %}
+### Software Engineering, Universidad de Buenos Aires <small>2006 – 2011</small>
+
+A 6-year career program comparable to a master's degree, with a focus on natural sciences, maths, programming, and software design. I ended dropping out at around 2/3rds into the program, but learning a ton.
+
+### Collaborator, Universidad de Buenos Aires <small>2009 – 2010, 2021</small>
+
+While at uni, I worked as an ad honorem professor on the "Algoritmos y Programción II" course, which teaches intermediate programming concepts. In 2020 I got back as a collaborator on the "Algoritmos y Programción III" course, which focused on OOP and was taught remotely due to the Covid pandemic.
+
 
 ---
 
