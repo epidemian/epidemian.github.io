@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% assign resume = site.data[page.resume_key] %}
-
 <style>
 body:has(.resume) .wrapper {
   max-width: 800px;
@@ -42,22 +40,5 @@ body:has(.resume) .wrapper {
 </style>
 
 <div class="resume">
-  <h1 class="wide-heading">
-    Demian Ferreiro
-    <span class="subtitle">{{ resume.subtitle }}</span>
-  </h1>
-  {%- for section in resume.sections -%}
-    {% if section.title %}<h2 id="{{ section.slug }}">{{ section.title }}</h2>{% endif %}
-    {{ section.content | markdownify }}
-    {%- for item in section.items -%}
-      <h3 class="wide-heading">
-        <span>{{ item.role }}, {{ item.org }}</span>
-        <small class="time">
-          {{ "" | split: "" | push: item.location | push: item.time | compact | join: ", " }}
-        </small>
-      </h3>
-      {{ item.description | markdownify }}
-      <p class="techs">{{ item.buzzwords | join: ' · ' }}</p>
-    {%- endfor -%}
-  {%- endfor -%}
+  {{ content }}
 </div>
