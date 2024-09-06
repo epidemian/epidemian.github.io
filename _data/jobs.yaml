@@ -2,73 +2,70 @@
   org: Personal projects
   time: Jun 2022 – present
   description: |
-    Decided to take some time off professional software development after feeling quite burned out. Started writing on [my blog](/blog). Worked on some temporary part-time jobs, like teaching rock climbing on a local club and driving and Uber. Also did some recreational programming on personal projects.
+    Took some time off professional software development[.](/assets/images/sabbatical.jpeg) Started writing on [my blog](/blog). Worked on other temporary part-time jobs, like teaching rock climbing at a local club, and driving and Uber. Also did some recreational programming on personal projects.
   buzzwords: []
 - role: Senior Front-end Engineer
   org: <a href="https://www.toptal.com/">Toptal</a>
   location: remote
   time: May 2019 – Jun 2022
   description: |
-    My first fully remote and distributed experience —luckily starting before Covid!— for one of the leading freelancing platforms worldwide. Among other things:
-    - Worked on the front-ends for both the client-facing and the freelancer-facing web applications. These were complex React projects, with multiple simultaneous product initiatives, which required effective intra-and-inter team collaboration.
+    My first fully remote and distributed experience —luckily starting before Covid!—, for one of the leading freelancing platforms worldwide.
+    - Worked on the front-ends for both the client-facing and the freelancer-facing web applications. These were complex React projects, with multiple teams working on different initiatives simultaneously. This required a great deal of effective collaboration.
     - Occasionally contributed to other projects, like the big Ruby on Rails monolithic backend, or the Cucumber-based end-to-end integration test.
     - Interviewed engineering candidates for front-end roles.
-    - Developed a chat component for communication between freelancers and their clients. One of the first "real-time updates" projects in the company (i.e. app reacting to server events).
-    - Designed an architecture proposal for a unified "real-time updates" solution across all company applications. Based on an event bus and WebSockets.
-    - Gave a "workshop" for learning how to solve the Rubik's cube during a team offsite meetup. At least 3 teammates learned the whole thing that day.
-  buzzwords: [JavaScript, React, react-testing-library, Apollo GraphQL, WebSockets, Figma, Ruby, Ruby on Rails, Cucumber, Docker]
+    - Developed a chat component for communication between freelancers and their clients. One of the first "live updates" projects in the company (i.e. app reacting to server events).
+    - Designed an architecture proposal for a unified publish/subscribe event bus to have live updates across all company applications.
+    - Gave a "workshop" for learning how to solve the Rubik's cube during a team offsite meetup. At least 3 teammates learned the whole thing.
+  buzzwords: [JavaScript, React, testing-library, GraphQL, WebSockets, Ruby, Ruby on Rails, Cucumber, Docker]
 - role: Full-stack developer
   org: <a href="https://www.linkedin.com/company/restorando.com">Restorando</a>
   location: Buenos Aires
   time: Oct 2016 – Apr 2019
   description: |
-    Worked on the restaurant booking platform as a full stack web developer and technical lead. The company's startup culture allowed me to work on a variety of different fronts. It was a lot of fun a great learning experience.
-
-    - Mainly focused on the development and architecture of a new front-end for the diner-facing application, written in TypeScript/React, and a GraphQL layer that interfaced different APIs and served both the web and the mobile native apps.
-    - Lead technical initiatives to improve the architecture of our different web services.
-    - Implemented a replacement for a legacy ad-hoc JRuby/Lucene search service that suffered from downtime, scalability and maintainability problems. The new service was a much simpler vanilla Elasticsearch solution, which proved to be better on all those fronts.
-    - Interviewed engineering candidates and mentored new developers.
-    - Participated on a "product" team, brainstorming and designing new initiatives.
-  buzzwords: [JavaScript, React, Redux, GraphQL, Node.js, Ruby, Ruby on Rails, Elasticsearch, Docker, Kubernetes, AWS]
+    Worked on a restaurant booking platform as a full stack web developer and technical lead.
+    - Modernized the diner-facing website, rewriting a classic Rails site into a "modern" React application with bells and whistles: Redux, TypeScript, a fat GraphQL layer. In hindsight, not a good idea: it wasn't worth the development cost and complexity.
+    - Worked closely with Product stakeholders, to try to bridge the gap between our engineering initiatives and business needs.
+    - Won a hackathon for a PoC of a better search service. Then lead the development to bring that idea to production, replacing an ad-hoc Lucene-based service that suffered from downtime, scalability and maintainability problems with a vanilla Elasticsearch solution, which proved to be better on all those fronts.
+  buzzwords: [JavaScript, React, Redux, GraphQL, Node.js, Ruby, Ruby on Rails, Elasticsearch, Docker, Kubernetes]
 - role: Full-stack web developer
   org: TripMate
   location: Buenos Aires
   time: Nov 2015 – Oct 2016
   description: |
-    Developed a tourism web application from the ground up with two colleagues. A truly full-stack and architecture-design experience. The back-end was a simple Ruby/Sinatra API while the front-end was a JavaScript application that used Mithril.js as a lightweight view layer. Even though the project/startup didn't lift off in the end, it was a very valuable and fun endeavor.
-  buzzwords: [JavaScript, Mithril.js, Ruby, Sinatra, REST, Heroku]
+    Started a platform for booking tourism activities with two colleagues, after receiving some funding. Designed the architecture and worked on both the backend —a relatively simple Sinatra API— and front-end —a web application implemented with Mithril.js. Even though this startup attempt didn't took off in the end, the experience was definitely worth it.
+  buzzwords: [JavaScript, Mithril.js, Ruby, Sinatra, PostgreSQL, Heroku]
 - role: Freelance developer
   org: <a href="https://www.linkedin.com/company/stash-beauty/">Stash Beauty</a>
   location: remote
   time: Mar 2015 – Jul 2016
   description: |
-    Maintained and developed a REST API for a mobile application, as well as a simple marketing website and an administration website. The server was programmed in Python and run on the Google App Engine platform.
-  buzzwords: [Python, Django, Google App Engine, NoSQL]
+    Maintained a REST API and simple marketing and admin websites for a cosmetics startup. Implemented complex work queues for scraping and aggregating inventories from different cosmetics stores.
+  buzzwords: [Python, Google App Engine, NoSQL]
 - role: Web developer
   org: Sumavisos / <a href="https://www.properati.com.ar/">Properati</a>
   location: Buenos Aires
   time: Mar 2013 – Mar 2015
   description: |
-    Worked on two medium-sized projects for Sumavisos: an existing jobs web portal, and a new restaurant booking website. Later on I worked on the real-estate site Properati. All these projects had similar architectures, using Ruby/Rails on the back-end, while the front-end was a classic server-rendered HTML site with JS sprinkled in.
+    Maintained a jobs aggregator website, and developed a restaurant booking website from scratch while working on Sumavisos. Later on I worked on the real-estate site Properati. All these projects had similar architectures, with Ruby on Rails backends, and classic server-rendered HTML+CSS front-ends with some JS sprinkled in.
   buzzwords: [Ruby, Rails, Sequel, JavaScript, jQuery]
 - role: Developer
   org: <a href="https://fdvsolutions.com">FDV Solutions</a>
   location: Buenos Aires
   time: Jan 2011 – Mar 2013
   description: |
-    Worked on many varied projects on a software consulting company. Among others: some mobile Android/Java apps, a Groovy/Grails medium-sized project, a couple of small but fun Ruby/Sinatra web projects, a mobile web PhoneGap application, and even a "smart" TV app.
+    Worked on many varied projects on a software consulting company. Among others: various Android apps, a Grails web project for [Mercado Libre](https://www.mercadolibre.com.ar/), some small but fun Sinatra websites, a mobile web PhoneGap app, and even a "smart" TV app.
   buzzwords: [Java, Android, Groovy, Grails, Ruby, Sinatra, Heroku, JavaScript, PhoneGap]
 - role: Jr Java Programmer
-  org: <a href="https://www.creativecoefficient.net/">Creative Coefficient SRL</a>
+  org: <a href="https://www.creativecoefficient.net/">Creative Coefficient</a>
   location: Buenos Aires
   time: Sep 2010 – Jan 2011
   description: |
-    Developed an access-control application for organizations. An extremely enterprise-y project, it used some of the most "<abbr title="Enterprise Edition">EE</abbr>" parts of Java: JBoss Seam Framework, RichFaces/JSF, Hibernate/JPA and the JBoss application server. Ended up quitting out of sheer boredom.
-  buzzwords: [Java, JBoss Seam, RichFaces, JSF, Hibernate]
+    Developed an access-control application for organizations. An extremely enterprise-y project, it seemed to include every Java library labeled as "<abbr title="Enterprise Edition">EE</abbr>". Not a stimulating environment; I learned the value of having inspiring teammates.
+  buzzwords: [Java EE, JBoss Seam, RichFaces, JSF, Hibernate]
 - role: Flash games programmer
   org: <a href="https://www.linkedin.com/company/e-volution">e-volution</a>
   location: Buenos Aires
   time: Jun 2008 – Jan 2010
   description: |
-    I had the fortune of developing video games on my first job as a programmer. Even though they were Flash games, it was a ton of fun, and an invaluable learning experience.
+    I had the fortune of developing video games on my first job as a programmer. Even though they were Flash games, it was a fun and very formative experience.
   buzzwords: [Flash, ActionScript 3]
