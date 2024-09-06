@@ -29,7 +29,7 @@ I've worked in teams of many sizes, from tiny startups where I was the sole deve
 - <abbr title="Advent of Code">AoC</abbr> solutions for years [2020](https://github.com/epidemian/advent-of-code-2020) (in Ruby), [2021](https://github.com/epidemian/advent-of-code-2021), [2022](https://github.com/epidemian/advent-of-code-2022) and [2023](https://github.com/epidemian/advent-of-code-2023) (in Rust). Done for fun and to hone my skills in these languages. I tried writing code I could be proud of, and journaled my learnings. Getting to 100% completion was a great challenge :)
 
 ## Skills, or what I do... {#skills}
-- Develop complex web applications using the "modern" React-centric approach.
+- Build complex web applications using the "modern" React-centric approach.
 - Prefer writing "classic" web pages —with server-side rendered HTML, CSS, and vanilla JavaScript— when interactivity is low and the complexity of JS frameworks is not justified.
 - Develop and deploy backend services.
 - Work with other developers to design complex systems. And always keep an eye on opportunities to reduce incidental complexity.

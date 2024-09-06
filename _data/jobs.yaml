@@ -13,7 +13,7 @@
     - Worked on the front-ends for both the client-facing and the freelancer-facing web applications. These were complex React projects, with multiple teams working on different initiatives simultaneously. This required a great deal of effective collaboration.
     - Occasionally contributed to other projects, like the big Ruby on Rails monolithic backend, or the Cucumber-based end-to-end integration test.
     - Interviewed engineering candidates for front-end roles.
-    - Developed a chat component for communication between freelancers and their clients. One of the first "live updates" projects in the company (i.e. app reacting to server events).
+    - Built a chat component for communication between freelancers and their clients. One of the first "live updates" projects in the company (i.e. app reacting to server events).
     - Designed an architecture proposal for a unified publish/subscribe event bus to have live updates across all company applications.
     - Gave a "workshop" for learning how to solve the Rubik's cube during a team offsite meetup. At least 3 teammates learned the whole thing.
   buzzwords: [JavaScript, React, testing-library, GraphQL, WebSockets, Ruby, Ruby on Rails, Cucumber, Docker]
@@ -46,7 +46,7 @@
   location: Buenos Aires
   time: Mar 2013 – Mar 2015
   description: |
-    Maintained a jobs aggregator website, and developed a restaurant booking website from scratch while working on Sumavisos. Later on I worked on the real-estate site Properati. All these projects had similar architectures, with Ruby on Rails backends, and classic server-rendered HTML+CSS front-ends with some JS sprinkled in.
+    Maintained a jobs aggregator website, and built a restaurant booking website from scratch while working on Sumavisos. Later on I worked on the real-estate site Properati. All these projects had similar architectures, with Ruby on Rails backends, and classic server-rendered HTML+CSS front-ends with some JS sprinkled in.
   buzzwords: [Ruby, Rails, Sequel, JavaScript, jQuery]
 - role: Developer
   org: <a href="https://fdvsolutions.com">FDV Solutions</a>
@@ -67,5 +67,5 @@
   location: Buenos Aires
   time: Jun 2008 – Jan 2010
   description: |
-    I had the fortune of developing video games on my first job as a programmer. Even though they were Flash games, it was a fun and very formative experience.
+    I had the fortune of programming video games on my first IT job. Even though they were Flash games, it was a fun and very formative experience.
   buzzwords: [Flash, ActionScript 3]
