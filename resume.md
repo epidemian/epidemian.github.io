@@ -13,9 +13,7 @@ I'm a software developer with more than 15 years of professional experience, mos
 
 I'm most fluent in Ruby, TypeScript, and English. But I've also written my fair share of Java, Python, SQL, Bash, C++, Rust, and many more. I like learning, and care about detail, so I tend to go in-depth in everything I do.
 
-I want to make software that people can enjoy. So valuing aspects like correctness, simplicity, or performance comes naturally: users like non-buggy, easy-to-use, and fast software.
-
-I've worked in teams of many sizes, from tiny startups where I was the sole developer of the whole backend, to big organizations where the coordination between hundreds of developers was a big challenge. And from greenfield projects to maintenance and modernization of legacy systems.
+I want to make software that people can enjoy. So I value aspects like correctness, simplicity, and performance: because people like non-buggy, easy-to-use, and fast software.
 
 ## Contact
 - <epidemian@gmail.com>
