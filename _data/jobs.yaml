@@ -47,7 +47,7 @@
   time: Mar 2013 – Mar 2015
   description: |
     Maintained a jobs aggregator website, and built a restaurant booking website from scratch while working on Sumavisos. Later on I worked on the real-estate site Properati. All these projects had similar architectures, with Ruby on Rails backends, and classic server-rendered HTML+CSS front-ends with some JS sprinkled in.
-  buzzwords: [Ruby, Rails, Sequel, JavaScript, jQuery]
+  buzzwords: [Ruby, Ruby on Rails, Sequel, JavaScript, jQuery]
 - role: Developer
   org: <a href="https://fdvsolutions.com">FDV Solutions</a>
   location: Buenos Aires
