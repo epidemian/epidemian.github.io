@@ -16,7 +16,7 @@
     - Built a chat component for communication between freelancers and their clients. One of the first "live updates" projects in the company (i.e. app reacting to server events).
     - Designed an architecture proposal for a unified publish/subscribe event bus to have live updates across all company applications.
     - Gave a "workshop" for learning how to solve the Rubik's cube during a team offsite meetup. At least 3 teammates learned the whole thing.
-  buzzwords: [JavaScript, React, testing-library, GraphQL, WebSockets, Ruby, Ruby on Rails, Cucumber, Docker]
+  buzzwords: [TypeScript, React, testing-library, GraphQL, WebSockets, Ruby, Ruby on Rails, Cucumber, Docker]
 - role: Full-stack developer
   org: <a href="https://www.linkedin.com/company/restorando.com">Restorando</a>
   location: Buenos Aires
@@ -26,7 +26,7 @@
     - Modernized the diner-facing website, rewriting a classic Rails site into a "modern" React application with bells and whistles: Redux, TypeScript, a fat GraphQL layer. In hindsight, not a good idea: it wasn't worth the development cost and complexity.
     - Worked closely with Product stakeholders, to try to bridge the gap between our engineering initiatives and business needs.
     - Won a hackathon for a PoC of a better search service. Then lead the development to bring that idea to production, replacing an ad-hoc Lucene-based service that suffered from downtime, scalability and maintainability problems with a vanilla Elasticsearch solution, which proved to be better on all those fronts.
-  buzzwords: [JavaScript, React, Redux, GraphQL, Node.js, Ruby, Ruby on Rails, Elasticsearch, Docker, Kubernetes]
+  buzzwords: [TypeScript, React, Redux, GraphQL, Node.js, Ruby, Ruby on Rails, Elasticsearch, Docker, Kubernetes]
 - role: Full-stack web developer
   org: TripMate
   location: Buenos Aires
