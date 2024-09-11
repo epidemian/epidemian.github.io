@@ -1,5 +1,4 @@
 ---
-title: Blog posts
-redirect_to: /
-# TODO: make a listing with all blog posts
+title: All posts
+layout: post_list
 ---
