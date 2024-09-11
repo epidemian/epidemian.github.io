@@ -98,6 +98,11 @@ h1, h2, h3, h4, h5, h6 {
   font-variant-ligatures: common-ligatures discretionary-ligatures;
 }
 
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+
 a:not(.inert-link) {
   color: inherit;
   transition: all 0.1s;
@@ -288,20 +293,15 @@ details summary {
   padding-bottom: min(3rem, 7.5%);
 }
 
-.page-heading {
-  font-size: 2rem;
-}
-
-.post-list-heading {
-  font-size: 1.75rem;
-}
-
 .post-list {
   margin-left: 0;
   list-style: none;
 }
+.post-list h3 {
+  margin: 0;
+}
 .post-list > li {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .post-meta {
@@ -316,11 +316,6 @@ details summary {
 .post-author {
   font-size: 1.0625rem;
   font-style: italic;
-}
-
-.post-link {
-  display: block;
-  font-size: 1.5rem;
 }
 
 /**
@@ -343,15 +338,6 @@ details summary {
 .post-content {
   counter-reset: sidenote-counter;
   margin-bottom: 2rem;
-}
-.post-content h2 {
-  font-size: 1.625rem;
-}
-.post-content h3 {
-  font-size: 1.25rem;
-}
-.post-content h4 {
-  font-size: 1.125rem;
 }
 
 .post-content h2,
