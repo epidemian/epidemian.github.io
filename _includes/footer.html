@@ -2,7 +2,11 @@
   <div class="wrapper">
     <div class="footer-heading">A personal blog by Demian Ferreiro</div>
     <div>
-      <a href="{{ '/contact' | relative_url }}">Contact</a>, or subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a>
+      {%  comment  %}
+      TODO: add other links to footer. Ideally:
+      :writing_hand: Fix typo | :rss_logo: Subscribe | :envelope: Get in touch
+      {% endcomment %}
+      Subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a>
     </div>
   </div>
 </footer>
