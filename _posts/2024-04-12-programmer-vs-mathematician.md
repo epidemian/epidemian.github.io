@@ -4,7 +4,7 @@ layout: post
 tags: maths ruby
 ---
 
-Recently i came across a puzzling property of numbers that got me to reflect on what "tickles" my mind as a programmer. And how programmers and mathematicians, even though they share much in common —a mix of playfulness and rigour, and a knack for logic problem solving—, might be motivated by very different things.<span class="sidenote-number" /><span class="sidenote"> Of course, this is all painting with very broad strokes. Every person is different.</span>
+Recently i came across a puzzling property of numbers that got me to reflect on what "tickles" my mind as a programmer. And how programmers and mathematicians, even though they share much in common —a mix of playfulness and rigour, and a knack for logic problem-solving—, might be motivated by very different things.<span class="sidenote-number" /><span class="sidenote"> Of course, this is all painting with very broad strokes. Every person is different.</span>
 
 Consider this simple question: what would happen if we pick a number, arrange its digits in descending and ascending order to get two different numbers, and then subtract those two?
 
@@ -54,7 +54,7 @@ Let's do some bottom-up development and start with the simplest bit: checking if
 def repdigit?(n) = n.digits.uniq.size == 1
 ```
 
-There's quite a bit going on on this line if you're not used to Ruby, so let's break it apart. The `n.digits` method gives us an array with the number's base-10 digits. Then we filter out repeated digits using `uniq`. So we're basically saying: a number is a repdigit if it has only one distinct digit. The code reads almost as a condensed version of it's English explanation.
+There's quite a bit going on on this line if you're not used to Ruby, so let's break it apart. The `n.digits` method gives us an array with the number's base-10 digits. Then we filter out repeated digits using `uniq`. So we're basically saying: a number is a repdigit if it has only one distinct digit. The code reads almost as a condensed version of its English explanation.
 
 By the way, if you're wondering about this `def name(args) = expr` weirdness, that is Ruby's ["endless" method][endless methods] syntax, which debuted on version 3.0. I'm still on the fence about it to be honest. On the one hand, it seems like the kind of unnecessary syntax sugar that tends to bloat languages and complicates answering basic questions like "how do i define a method?". But at the same time, it can be useful to distinguish the cases where something can be expressed succinctly in a single expression, and the cases where multiple statements are needed.
 
@@ -81,7 +81,7 @@ end
 
 We take the difference of the two rearrangements of the number's digits (which we haven't defined yet). If that difference is equal to the input number, then we have found where the sequence starts repeating and we return that number. And if it's a different number, we recur and do the same thing again this time with the difference.
 
-Note that this recursive function only terminates if the operation reaches the same number at some point. But we *know* that to be true; that's the whole point of writing this program! We just want to check this programmatically. It doesn't make sense to defend against an infinite recursion that we know won't happen. Even more: [it is known][kaprekar routine] that for 4-digit numbers this operation actually converges in 7 or less steps, so if we preferred iteration over recursion we could've written:
+Note that this recursive function only terminates if the operation reaches the same number at some point. But we *know* that to be true; that's the whole point of writing this program! We just want to check this programmatically. It doesn't make sense to defend against an infinite recursion that we know won't happen. Even more: [it is known][kaprekar routine] that for 4-digit numbers this operation actually converges in 7 or fewer steps, so if we preferred iteration over recursion we could've written:
 
 ```ruby
 def kap(n)
