@@ -103,6 +103,11 @@ h2 { font-size: 1.5rem; }
 h3 { font-size: 1.25rem; }
 h4 { font-size: 1.125rem; }
 
+:is(h2, h3, h4):not(:first-child) {
+  /* Leave some space between "sections". */
+  margin-top: 3rem;
+}
+
 a:not(.inert-link) {
   color: inherit;
   transition: all 0.1s;
@@ -338,13 +343,6 @@ details summary {
 .post-content {
   counter-reset: sidenote-counter;
   margin-bottom: 2rem;
-}
-
-.post-content h2,
-.post-content h3,
-.post-content h4 {
-  /* Leave some space between post "sections". */
-  margin-top: 3rem;
 }
 
 .sidenote {
