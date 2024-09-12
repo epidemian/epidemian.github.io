@@ -1,4 +1,8 @@
 ---
 title: All posts
-layout: post_list
+layout: default
 ---
+
+# All posts
+
+{% include post_list.html %}
