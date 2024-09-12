@@ -314,7 +314,8 @@ details summary {
   color: var(--text-color-dim);
 }
 
-.post-meta > *:not(:first-child)::before {
+span.post-meta > ::before,
+.post-meta > :not(:first-child)::before {
   content: ' — ';
 }
 

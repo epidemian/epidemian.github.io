@@ -1,11 +1,11 @@
 <ul class="post-list">
   {%- for post in site.posts -%}
   <li>
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-    <div class="post-meta">
+    <a href="{{ post.url | relative_url }}"><strong>{{ post.title | escape }}</strong></a>
+    <span class="post-meta">
       <time>{{ post.date | date: site.date_format }}</time>
       <span>{{ post.tags | join: ", " }}</span>
-    </div>
+    </span>
   </li>
   {%- endfor -%}
 </ul>
