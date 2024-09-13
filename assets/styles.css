@@ -45,6 +45,7 @@ html {
   --text-color-dim:     #235347;
   --text-color-dimmer:  #8eb69b;
   --text-color-dimmest: #daf1de;
+  --main-text-width: 730px;
 }
 
 html {
@@ -198,20 +199,11 @@ pre {
 .wrapper {
   margin: 0 auto;
   padding: 0 10%;
-  max-width: 730px;
+  max-width: var(--main-text-width);
   /* Use content-box box sizing so that the percentage padding is not counted as
   part of the width. This avoid content getting narrower as the viewport gets
   bigger. */
   box-sizing: content-box;
-}
-
-/* When a post has sidenotes, the horizontal space distribution is:
-10+50+5+25+10 Where there's 10% space to each side, the main text takes 50%, the
-sidenotes 25%, and there's a 5% gap between them. All this up to a maximum total
-size of 1460px. */
-body:has(.sidenote) .wrapper {
-  /* Consider the space taken by the padding. */
-  max-width: calc(1460px * 0.8);
 }
 
 .svg-icon {
@@ -327,11 +319,6 @@ span.post-meta > ::before,
 /**
  * Posts
  */
-.post:has(.sidenote) {
-  /* Post text takes 50% of the screen, but its container is 80% due to padding. */
-  width: calc(50% / 0.8);
-}
-
 .post-header {
   margin-bottom: 2rem;
 }
@@ -346,10 +333,22 @@ span.post-meta > ::before,
   margin-bottom: 2rem;
 }
 
+/* When a post has sidenotes, the main text keeps being the same size, and the
+sidenotes are 48% the width of the main text, with a separation of 12% the width
+of the main text. So we need to make content wrappers 60% larger. */
+body:has(.sidenote) .wrapper {
+  max-width: calc(var(--main-text-width) * 1.6);
+}
+.post:has(.sidenote) {
+  /* Keep main text the same width as without sidenotes. */
+  width: calc(100% / 1.6);
+}
+
 .sidenote {
   float: right;
   clear: right;
   width: 48%;
+  /* Sidenote + separation is 60% of the main text width. */
   margin-right: -60%;
   margin-bottom: 1em;
   font-size: 0.9rem;
@@ -380,7 +379,6 @@ span.post-meta > ::before,
  */
 @media screen and (max-width: 760px) {
   .wrapper {
-    width: 85%;
     padding-left: 7.5%;
     padding-right: 7.5%;
   }
