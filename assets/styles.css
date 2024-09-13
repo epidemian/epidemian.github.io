@@ -198,7 +198,7 @@ pre {
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 10%;
+  padding: 0 7.5%;
   max-width: var(--main-text-width);
   /* Use content-box box sizing so that the percentage padding is not counted as
   part of the width. This avoid content getting narrower as the viewport gets
@@ -379,8 +379,8 @@ body:has(.sidenote) .wrapper {
  */
 @media screen and (max-width: 760px) {
   .wrapper {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   .post:has(.sidenote) {
     width: auto;
