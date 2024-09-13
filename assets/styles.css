@@ -122,13 +122,6 @@ a:not(.inert-link):hover {
   text-decoration: none;
 }
 
-.social-media-list a:hover {
-  text-decoration: none;
-}
-.social-media-list a:hover .username {
-  text-decoration: underline;
-}
-
 blockquote {
   color: var(--text-color-dim);
   border-left: 3px solid var(--text-color-dimmer);
@@ -204,19 +197,6 @@ pre {
   part of the width. This avoid content getting narrower as the viewport gets
   bigger. */
   box-sizing: content-box;
-}
-
-.svg-icon {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  fill: var(--text-color-dimmer);
-  margin-right: 0.5rem;
-  vertical-align: text-top;
-}
-
-.social-media-list li + li {
-  padding-top: 5px;
 }
 
 table {
