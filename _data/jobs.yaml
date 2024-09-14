@@ -3,7 +3,7 @@
   time: Jun 2022 – present
   description: |
     Took some time off professional software development[.](/assets/images/sabbatical.jpeg) Started writing on [my blog](/blog). Worked on other temporary part-time jobs, like teaching rock climbing at a local club, and driving and Uber. Also did some recreational programming on personal projects.
-  buzzwords: []
+  buzzwords: [Rust, Ruby, Jekyll, Blue-collar work]
 - role: Senior Front-end Engineer
   org: <a href="https://www.toptal.com/">Toptal</a>
   location: remote
@@ -16,7 +16,7 @@
     - Built a chat component for communication between freelancers and their clients. One of the first "live updates" projects in the company (i.e. app reacting to server events).
     - Designed an architecture proposal for a unified publish/subscribe event bus to have live updates across all company applications.
     - Gave a "workshop" for learning how to solve the Rubik's cube during a team offsite meetup. At least 3 teammates learned the whole thing.
-  buzzwords: [TypeScript, React, testing-library, GraphQL, WebSockets, Ruby, Ruby on Rails, Cucumber, Docker]
+  buzzwords: [TypeScript, React, Jest, GraphQL, WebSockets, Ruby, Ruby on Rails, Cucumber, Docker]
 - role: Full-stack developer
   org: <a href="https://www.linkedin.com/company/restorando.com">Restorando</a>
   location: Buenos Aires
@@ -54,7 +54,7 @@
   time: Jan 2011 – Mar 2013
   description: |
     Worked on many varied projects on a software consulting company. Among others: various Android apps, a Grails web project for [Mercado Libre](https://www.mercadolibre.com.ar/), some small but fun Sinatra websites, a mobile web PhoneGap app, and even a "smart" TV app.
-  buzzwords: [Java, Android, Groovy, Grails, Ruby, Sinatra, Heroku, JavaScript, PhoneGap]
+  buzzwords: [Java, Android, JavaScript, CoffeeScript, Groovy, Grails, Ruby, Sinatra, Heroku, PhoneGap]
 - role: Jr Java Programmer
   org: <a href="https://www.creativecoefficient.net/">Creative Coefficient</a>
   location: Buenos Aires
