@@ -25,6 +25,7 @@ I want to make software that people can enjoy. So I value aspects like correctne
 - [URL Snake](https://demian.ferrei.ro/snake): a silly snake game that can be played in the browser URL.
 - [λ-Espresso](https://demian.ferrei.ro/lambda-espresso/): an online lambda calculus interpreter.
 - <abbr title="Advent of Code">AoC</abbr> solutions for years [2020](https://github.com/epidemian/advent-of-code-2020) (in Ruby), [2021](https://github.com/epidemian/advent-of-code-2021), [2022](https://github.com/epidemian/advent-of-code-2022) and [2023](https://github.com/epidemian/advent-of-code-2023) (in Rust). Done for fun and to hone my skills in these languages. I tried writing code I could be proud of, and journaled my learnings. Getting to 100% completion was a great challenge :)
+- [CoffeeScript](https://coffeescript.org/): made some [contributions](https://github.com/jashkenas/coffeescript/pulls?q=is%3Apr+author%3Aepidemian+is%3Aclosed) to the language, like improving [error messages](https://github.com/jashkenas/coffeescript/pull/2723) and adding a few [mathematical operators](https://github.com/jashkenas/coffeescript/pull/2887).
 
 ## Skills, or what I do... {#skills}
 - Build complex web applications using the "modern" React-centric approach.
