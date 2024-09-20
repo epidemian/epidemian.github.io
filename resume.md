@@ -7,7 +7,7 @@ override_head_title: true
 
 # Demian Ferreiro <small>Résumé/CV</small>
 
-**Go to:** [Contact](#contact) \| [Projects](#projects) \| [Skills](#skills) \| [Experience](#work) \| [Education](#education)<br><br>
+**Go to:** [Contact](#contact) \| [Projects](#projects) \| [Skills](#skills) \| [Experience](#work) \| [Education](#education)<span class="print"> \| [web version](/resume)</span><br><br>
 
 I'm a software developer with more than 15 years of professional experience, most recently working on web applications, backend services, and on technical leadership roles.
 

@@ -39,6 +39,16 @@ html:has(.resume) {
   font-size: 0.9rem;
   color: var(--text-color-dim);
 }
+.print { display: none }
+
+@media print {
+  html:has(.resume) {
+    --main-text-width: auto;
+  }
+  .print {
+    display: initial;
+  }
+}
 </style>
 
 <div class="resume">
