@@ -4,7 +4,7 @@ layout: post
 tags: random LLMs
 ---
 
-A chat with friends recently reminded me about pangrams, and what a cute little language curiosity they are.<span class="sidenote-number" /><span class="sidenote"> I also remembered that i never got a [self-enumerating pangram] generator to work. I should give that another try!</span> I thought it would be fun play with ChatGPT and see if it could generate some good ones, expecting it to do quite well on this task. After all, <abbr title="Large Language Models">LLMs</abbr> should be excellent wordcels, right?<span class="sidenote-number" /><span class="sidenote"> That is, is there's one thing they should be very good at, that is verbal intelligence. Yeah, i know [this meme][wordcels vs shape rotators] of "shape rotators vs. wordcels" can be a bit cringy, but i honestly find these terms ironically endearing.</span> Well, it doesn't seem so.
+A chat with friends recently reminded me about pangrams, and what a cute little language curiosity they are.<span sidenote> I also remembered that i never got a [self-enumerating pangram] generator to work. I should give that another try!</span> I thought it would be fun play with ChatGPT and see if it could generate some good ones, expecting it to do quite well on this task. After all, <abbr title="Large Language Models">LLMs</abbr> should be excellent wordcels, right?<span sidenote> That is, is there's one thing they should be very good at, that is verbal intelligence. Yeah, i know [this meme][wordcels vs shape rotators] of "shape rotators vs. wordcels" can be a bit cringy, but i honestly find these terms ironically endearing.</span> Well, it doesn't seem so.
 
 Just so we're on the same page: pangrams are phrases that use every letter of the alphabet. Even if you didn't know that definition, chances are you already knew of one such phrase: "the quick brown fox jumps over the lazy dog", which is typically used to showcase typographic fonts.
 
@@ -26,7 +26,7 @@ So, how did a state-of-the-art LLM like ChatGPT-4o fare with pangrams? Let's see
 > A classic example in Spanish is: "El veloz murciélago hindú comía feliz cardillo y kiwi."
 > </details>
 
-I went with Spanish because, why not? It's nice when software understands your native language.<span class="sidenote-number" /><span class="sidenote"> In fact, maybe even programming languages should be designed to let people program in their mother tongue. Learning how to program when you're not fluent in English, or when your alphabet is not based on Latin, is more difficult and frustrating than it needs to be. A recent [CoRecursive episode] touches on this idea, and i found the guest's arguments to be very compelling. She created [Hedy], a language that allows students to learn programming using their native tongue. The breadth of languages it supports, from Spanish to Korean, is awe-inspiring :)</span> And, in any case, if it were true that LLMs have an internal model of the world, the output language shouldn't make much difference.
+I went with Spanish because, why not? It's nice when software understands your native language.<span sidenote> In fact, maybe even programming languages should be designed to let people program in their mother tongue. Learning how to program when you're not fluent in English, or when your alphabet is not based on Latin, is more difficult and frustrating than it needs to be. A recent [CoRecursive episode] touches on this idea, and i found the guest's arguments to be very compelling. She created [Hedy], a language that allows students to learn programming using their native tongue. The breadth of languages it supports, from Spanish to Korean, is awe-inspiring :)</span> And, in any case, if it were true that LLMs have an internal model of the world, the output language shouldn't make much difference.
 
 So, ChatGPT starts with a good definition of what a pangram is, but then it botches the example badly. It doesn't include *many* letters: B, J, Ñ, P, Q, S, T, and X.
 
@@ -58,7 +58,7 @@ So i tell ChatGPT about that:
 > This pangram includes all the letters of the Spanish alphabet, including "ñ".
 > </details>
 
-It identifies that the phrase is indeed missing an Ñ,<span class="sidenote-number" /><span class="sidenote"> Even though it's also missing many other letters. But, to be fair, programmers routinely forget about non-ASCII characters too. So ChatGPT might even be emulating that frequent mistake, honoring a tradition learned from an English-centric corpus.</span> and it manages to quote a correct well-known pangram. Yay!
+It identifies that the phrase is indeed missing an Ñ,<span sidenote> Even though it's also missing many other letters. But, to be fair, programmers routinely forget about non-ASCII characters too. So ChatGPT might even be emulating that frequent mistake, honoring a tradition learned from an English-centric corpus.</span> and it manages to quote a correct well-known pangram. Yay!
 
 Then i ask it to come up with a novel pangram:
 
@@ -82,7 +82,7 @@ Then i ask it to come up with a novel pangram:
 > I hope you like this original pangram.
 > </details>
 
-Ok, not the most natural-sounding phrase.<span class="sidenote-number" /><span class="sidenote"> Roughly, "The small-nosed and jovial penguin, an expert in boxing, launched his effective checkmate to the fast witch of the volcano"</span> But fair enough, i didn't say anything about the phrase having to make much sense.
+Ok, not the most natural-sounding phrase.<span sidenote> Roughly, "The small-nosed and jovial penguin, an expert in boxing, launched his effective checkmate to the fast witch of the volcano"</span> But fair enough, i didn't say anything about the phrase having to make much sense.
 
 However, a keen eye will notice that this is not a pangram: it's missing the letters H, K and W.
 
@@ -226,13 +226,13 @@ This one is tricky. And i find myself torn between an optimistic and a pessimist
 
 On the one hand, i find it quite relieving to see that even the latest and most powerful "AI" models are still so far off from anything that we could call general intelligence with a straight face.
 
-I don't think we're anywhere close to <abbr title="Artificial general intelligence">AGI</abbr>, and i'm glad for that. I don't know if i'm an "AI doomer" or not, but i generally agree with the statement of [AGI posing an existential risk][AI risk statement] to humanity. I guess i could try to articulate why i think creating something more intelligent (and therefore more powerful) than ourselves seems like a spectacularly stupid idea, and i don't understand why anyone would want to do that instead of trying to improve humanity in some less naive and risky way,<span class="sidenote-number" /><span class="sidenote"> Like, IDK, trying to augment *human* intelligence, or our capacity for coordination, or for empathy.</span> but this post is too long already.
+I don't think we're anywhere close to <abbr title="Artificial general intelligence">AGI</abbr>, and i'm glad for that. I don't know if i'm an "AI doomer" or not, but i generally agree with the statement of [AGI posing an existential risk][AI risk statement] to humanity. I guess i could try to articulate why i think creating something more intelligent (and therefore more powerful) than ourselves seems like a spectacularly stupid idea, and i don't understand why anyone would want to do that instead of trying to improve humanity in some less naive and risky way,<span sidenote> Like, IDK, trying to augment *human* intelligence, or our capacity for coordination, or for empathy.</span> but this post is too long already.
 
-Suffice to say, any anxiety i may hold for AI killing us all gets subdued by evidence suggesting that we're still a long way off that. Even though this is contrary to what some AI-hype-bros may say.<span class="sidenote-number" /><span class="sidenote"> It's unsurprising that many of the people who are trying to sell us the "AI revolution" today were also trying to sell us blockchain and NFTs as revolutions not too long ago.</span>
+Suffice to say, any anxiety i may hold for AI killing us all gets subdued by evidence suggesting that we're still a long way off that. Even though this is contrary to what some AI-hype-bros may say.<span sidenote> It's unsurprising that many of the people who are trying to sell us the "AI revolution" today were also trying to sell us blockchain and NFTs as revolutions not too long ago.</span>
 
 On the other hand, however, i do worry about the AI-hype-bros winning, and these dumb inscrutable black boxes known as LLMs being deployed for actually important stuff.
 
-And this is already happening to some extent. Google already provides "AI-based" results that regularly [make the same kind of basic mistake][AI search] illustrated on this blog post: confidently asserting something generated by a text predictor that's been trained on a huge corpus of Reddit posts.<span class="sidenote-number" /><span class="sidenote"> Nothing against Reddit posts. I regularly add "site:reddit.com" to my Google searches when looking for stuff, especially opinions and reviews. But i also have the common sense to tell apart a genuine comment from a troll or a shitpost. These nuances seem completely opaque to an LLM, understandably so.</span> Mistakes that generally don't pass the sniff test of a well-informed person, let alone of an expert on a given field.
+And this is already happening to some extent. Google already provides "AI-based" results that regularly [make the same kind of basic mistake][AI search] illustrated on this blog post: confidently asserting something generated by a text predictor that's been trained on a huge corpus of Reddit posts.<span sidenote> Nothing against Reddit posts. I regularly add "site:reddit.com" to my Google searches when looking for stuff, especially opinions and reviews. But i also have the common sense to tell apart a genuine comment from a troll or a shitpost. These nuances seem completely opaque to an LLM, understandably so.</span> Mistakes that generally don't pass the sniff test of a well-informed person, let alone of an expert on a given field.
 
 I can only assume that unscrupulous job recruiters are already using similar models to filter out job applications. So these models may already be leaving people out of jobs. And we're trusting their overconfident token-prediction-based "judgment".
 

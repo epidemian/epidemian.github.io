@@ -27,9 +27,9 @@ But *which* possible numbers? All of them? Do we just leave the computer checkin
 
 We can try to get an intuition for how these sums behave by comparing the numbers made of only 9s (i.e., 9, 99, 999, and so on) to the sum of the factorials of those 9s (i.e., $$9!$$, $$9!{+}9!$$, $$9!{+}9!{+}9!$$, and so on).
 
-<span class="sidenote">Note that $$9!$$ is $$362\,880$$.</span>
+<span sidenote>Note that $$9!$$ is $$362\,880$$.</span>
 
-<span class="sidenote">And maybe the string formatting here also warrants a comment. In Ruby, "multiplying" a string and number —that is, sending the `*` message with a number argument to a string—, like in `'9' * n`, returns a string with `n` copies of the original. Similarly, multiplying an array with a number, as in `['9!'] * n`, returns an array with the elements of the original repeated `n` times. And curiously, multiplying an array *with a string*, as in the second `*` of `['9!'] * n * ' + '`, is the same as [joining the elements](https://ruby-doc.org/3.3.0/Array.html#method-i-2A) of the array with that string. A somewhat cryptic choice, yes, but since we're dealing with factorials here, multiplying stuff together seemed appropriate.</span>
+<span sidenote>And maybe the string formatting here also warrants a comment. In Ruby, "multiplying" a string and number —that is, sending the `*` message with a number argument to a string—, like in `'9' * n`, returns a string with `n` copies of the original. Similarly, multiplying an array with a number, as in `['9!'] * n`, returns an array with the elements of the original repeated `n` times. And curiously, multiplying an array *with a string*, as in the second `*` of `['9!'] * n * ' + '`, is the same as [joining the elements](https://ruby-doc.org/3.3.0/Array.html#method-i-2A) of the array with that string. A somewhat cryptic choice, yes, but since we're dealing with factorials here, multiplying stuff together seemed appropriate.</span>
 
 ```ruby
 1.upto(10) do |n|
@@ -61,7 +61,7 @@ And for 7 digits we can already see that $$9\,999\,999$$ is greater than $$7 \cd
 
 Then let the brute-forcing begin!
 
-<span class="sidenote">Note the very succinct and cute factorial definition: `(1..n).reduce(1, :*)`. We're taking advantage of `reduce()` accepting both a block or a symbol for the reducer function. Given the `:*` symbol, `reduce()` combines the numbers `1..n` using their `*` method. In other words: it multiplies them together.</span>
+<span sidenote>Note the very succinct and cute factorial definition: `(1..n).reduce(1, :*)`. We're taking advantage of `reduce()` accepting both a block or a symbol for the reducer function. Given the `:*` symbol, `reduce()` combines the numbers `1..n` using their `*` method. In other words: it multiplies them together.</span>
 
 ```ruby
 # Store the factorials from 0 to 9 to avoid recalculating them each time.

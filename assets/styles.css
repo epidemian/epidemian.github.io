@@ -354,6 +354,10 @@ body:has(.sidenote) .wrapper {
   right: 100%;
 }
 
+.sidenote-number input {
+  display: none;
+}
+
 /**
  * Small screens layout.
  */
@@ -372,14 +376,14 @@ body:has(.sidenote) .wrapper {
   .sidenote {
     display: none;
   }
-  .sidenote.shown {
+  .sidenote::before {
+    display: none;
+  }
+  .sidenote-number:has(:checked) + .sidenote {
     display: block;
     float: left;
     width: calc(100% - 2rem);
     margin: 1rem;
-  }
-  .sidenote.shown::before {
-    display: none;
   }
 }
 

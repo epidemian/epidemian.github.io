@@ -4,7 +4,7 @@ layout: post
 tags: maths ruby
 ---
 
-Recently i came across a puzzling property of numbers that got me to reflect on what "tickles" my mind as a programmer. And how programmers and mathematicians, even though they share much in common —a mix of playfulness and rigour, and a knack for logic problem-solving—, might be motivated by very different things.<span class="sidenote-number" /><span class="sidenote"> Of course, this is all painting with very broad strokes. Every person is different.</span>
+Recently i came across a puzzling property of numbers that got me to reflect on what "tickles" my mind as a programmer. And how programmers and mathematicians, even though they share much in common —a mix of playfulness and rigour, and a knack for logic problem-solving—, might be motivated by very different things.<span sidenote> Of course, this is all painting with very broad strokes. Every person is different.</span>
 
 Consider this simple question: what would happen if we pick a number, arrange its digits in descending and ascending order to get two different numbers, and then subtract those two?
 
@@ -14,7 +14,7 @@ Please take a moment and consider what would happen. Not necessarily to check it
 
 Well, let's see. Starting from 1988 the sequence would go:
 
-<span class="sidenote">Sidenote: if we had started from 2023 —the year i started writing and procrastinating this blog post— the sequence would look almost the same. The first step would be 3220&nbsp;−&nbsp;0223 =&nbsp;2997, and after that it would continue the same way. This is not such a cosmic coincidence as it seems; the numbers on these sequences tend to repeat a lot.</span>
+<span marginnote>Sidenote: if we had started from 2023 —the year i started writing and procrastinating this blog post— the sequence would look almost the same. The first step would be 3220&nbsp;−&nbsp;0223 =&nbsp;2997, and after that it would continue the same way. This is not such a cosmic coincidence as it seems; the numbers on these sequences tend to repeat a lot.</span>
 
 <!-- Hacky way of aligning the numbers in the sequence. Libre Baskerville doesn't have tabular numbers -->
 <style>
@@ -36,7 +36,7 @@ Well, let's see. Starting from 1988 the sequence would go:
 </blockquote>
 
 
-Once we hit 6174 the sequence starts repeating, as the result of applying this "biggest digit-arrangement minus smallest digit-arrangement" operation to 6174, is 6174 itself.<span class="sidenote-number" /><span class="sidenote"> Or in maths parlance: 6174 is a [fixed point] of this operation.</span>
+Once we hit 6174 the sequence starts repeating, as the result of applying this "biggest digit-arrangement minus smallest digit-arrangement" operation to 6174, is 6174 itself.<span sidenote> Or in maths parlance: 6174 is a [fixed point] of this operation.</span>
 
 Now here's the kicker: as long as the starting number is not a single repeated digit, **we can start from any 4-digit number and the sequence will always reach 6174**.
 
@@ -44,7 +44,7 @@ Of course, this is not a new discovery. 6174 is known as [Kaprekar's constant][6
 
 I don't know about you, but this surprised me when i first heard about it. All numbers converging to a single one? Instead of maybe converging to different numbers, or getting into loops? Who would've expected that!?
 
-But i also didn't have the mathematical tools —or curiosity really— to dig into the maths of this to understand it more deeply. Luckily, there aren't that many 4-digit numbers, and computers are pretty fast, or so i've been told. So instead of mathematically proving this the "correct" way, let's have some fun and write a simple Ruby program to check this property for every 4-digit number.<span class="sidenote-number" /><span class="sidenote"> We could use any language really. I like using Ruby for this kind of explorations because it gets out of the way and allows expressing things quite freely.</span>
+But i also didn't have the mathematical tools —or curiosity really— to dig into the maths of this to understand it more deeply. Luckily, there aren't that many 4-digit numbers, and computers are pretty fast, or so i've been told. So instead of mathematically proving this the "correct" way, let's have some fun and write a simple Ruby program to check this property for every 4-digit number.<span sidenote> We could use any language really. I like using Ruby for this kind of explorations because it gets out of the way and allows expressing things quite freely.</span>
 
 ### A simple subproblem
 
@@ -92,7 +92,7 @@ def kap(n)
 end
 ```
 
-Both versions will work fine for our purposes. If for some reason Kaprekar's property doesn't hold for some number, the iterative version will give us a wrong result, and the recursive version will hang forever or overflow the stack.<span class="sidenote-number" /><span class="sidenote"> Which of the two? That's [an interesting question][ruby TCO]!</span> Either way, we would know that we have screwed up our "proof" somewhere. *It's fine.*
+Both versions will work fine for our purposes. If for some reason Kaprekar's property doesn't hold for some number, the iterative version will give us a wrong result, and the recursive version will hang forever or overflow the stack.<span sidenote> Which of the two? That's [an interesting question][ruby TCO]!</span> Either way, we would know that we have screwed up our "proof" somewhere. *It's fine.*
 
 ### Rearranging digits
 
@@ -106,7 +106,7 @@ We take the digits of the number, sort them, then `join` them into a string, and
 
 We can quickly test this on Ruby's interactive console, `irb`:
 
-<span class="sidenote"><abbr title="Read-eval-print loop">REPLs</abbr> are great for this kind of exploratory programming. Instead of the more "classic" approach of writing a program on a source file, running it, tweaking it, running it again, etc, a REPL allow for a much tighter, almost immediate, feedback loop. Once you have your little bits of program written and tested on the console, you can copy them onto a program file.</span>
+<span marginnote><abbr title="Read-eval-print loop">REPLs</abbr> are great for this kind of exploratory programming. Instead of the more "classic" approach of writing a program on a source file, running it, tweaking it, running it again, etc, a REPL allow for a much tighter, almost immediate, feedback loop. Once you have your little bits of program written and tested on the console, you can copy them onto a program file.</span>
 
 ```irb
 $ irb
@@ -150,7 +150,7 @@ We need to make `descending_digits` consider its inputs as 4-digit numbers, so t
 def descending_digits(n) = n.digits.sort.reverse.join.ljust(4, '0').to_i
 ```
 
-After sorting the digits and joining them into a string, we're using `ljust(4, '0')` to pad the string with zeroes to the right so it is 4 characters long.<span class="sidenote-number" /><span class="sidenote"> A bit hacky, yes, but it gets the job done. At least it's quite succinct, and readable enough. If you can think of a better alternative, please let me know!</span>
+After sorting the digits and joining them into a string, we're using `ljust(4, '0')` to pad the string with zeroes to the right so it is 4 characters long.<span sidenote> A bit hacky, yes, but it gets the job done. At least it's quite succinct, and readable enough. If you can think of a better alternative, please let me know!</span>
 
 With that hotfix in, `kap(n)` now seems to work as intended:
 
@@ -174,7 +174,7 @@ end
 
 Again, notice how Ruby code can read as a condensed version of its English translation: for every number from 1 up to 9999, the number is either a repdigit, or its Kaprekar sequence converges to 6174. If neither of these is true, the "proof" fails.
 
-You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` alternative. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish control flow methods from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, using `and` and `or` as control flow operators —as alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we conceive them.<span class="sidenote-number" /><span class="sidenote"> Although, i'll admit this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things. So i'll think about my choice here as a rare exception to my usual structuredness :)</span>
+You may be wondering why i used the wordy `or` boolean operator instead of the more common symbolic `||` alternative. Well, it's a stylistic choice really. First, if i had used `||`, the `fail` method call would've needed parentheses around its argument, which i prefer to avoid since i think of `fail` as control flow and i like to visually distinguish control flow methods from other "normal" method calls, like `kap(n)` or `repdigit?(n)` in this case. And second, using `and` and `or` as control flow operators —as alternatives to `if` and `unless` respectively— is [a brilliant idea][avdi and or] and can help expressing things in the "natural" way we conceive them.<span sidenote> Although, i'll admit this might be a form of Stockholm Syndrome; a rationalization of Ruby's [multiple ways][timtowtdi] of doing the same thing. Generally i prefer languages having one obvious way of doing things. So i'll think about my choice here as a rare exception to my usual structuredness :)</span>
 
 Stitching all these snippets together, the complete "proof" program is:
 
@@ -214,7 +214,7 @@ I suspect a more maths-oriented person would go through this very differently. M
 
 But i appreciate having played with this. It seems i'm not that into maths as i once thought. And that i love programming. Who would have thought?
 
-And how about you? What was on *your* mind while your eyes read this?<span class="sidenote-number" /><span class="sidenote"> Assuming they did, in which case: thank you very much for coming along.</span>
+And how about you? What was on *your* mind while your eyes read this?<span sidenote> Assuming they did, in which case: thank you very much for coming along.</span>
 
 [fixed point]: https://en.wikipedia.org/wiki/Fixed_point_(mathematics)
 [6174]: https://en.wikipedia.org/wiki/6174_(number)

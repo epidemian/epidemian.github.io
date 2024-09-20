@@ -14,19 +14,6 @@
     </main>
 
     {%- unless page.bare_layout -%}{%- include footer.html -%}{%- endunless -%}
-
-    <script>
-      // TODO: use the hidden checkbox trick to make sidenote toggles work
-      // without JS.
-      // TODO: add mobile toggles for margin notes.
-      let sidenotes = document.querySelectorAll('.sidenote-number + .sidenote')
-      for (let sidenote of sidenotes) {
-        let toggle = sidenote.previousElementSibling
-        toggle.addEventListener('click', () => {
-          sidenote.classList.toggle('shown')
-        })
-      }
-    </script>
   </body>
 
 </html>
