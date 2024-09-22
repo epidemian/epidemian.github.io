@@ -387,6 +387,22 @@ body:has(.sidenote) .wrapper {
   }
 }
 
+/**
+ * Print styles.
+ */
+.print {
+  display: none;
+}
+@media print {
+  html {
+    /* Make text smaller and use more space on the page. */
+    --main-text-width: auto;
+    zoom: 66%;
+  }
+  .print {
+    display: initial;
+  }
+}
 
 /* Syntax highlight colors generated with `pygmentize -S vs -f html` */
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }

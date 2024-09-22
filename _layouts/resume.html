@@ -39,15 +39,18 @@ html:has(.resume) {
   font-size: 0.9rem;
   color: var(--text-color-dim);
 }
-.print { display: none }
+.resume #work {
+  break-before: page;
+}
 
 @media print {
   html:has(.resume) {
     --main-text-width: auto;
   }
-  .print {
-    display: initial;
-  }
+}
+@page {
+  size: a4 portrait;
+  margin: 0.5in 0;
 }
 </style>
 
