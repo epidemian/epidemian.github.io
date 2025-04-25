@@ -1,7 +1,7 @@
 ---
 title: "LLMs are not even good wordcels"
 layout: post
-tags: random LLMs
+tags: random AI LLMs
 ---
 
 A chat with friends recently reminded me about pangrams, and what a cute little language curiosity they are.<span sidenote> I also remembered that i never got a [self-enumerating pangram] generator to work. I should give that another try!</span> I thought it would be fun play with ChatGPT and see if it could generate some good ones, expecting it to do quite well on this task. After all, <abbr title="Large Language Models">LLMs</abbr> should be excellent wordcels, right?<span sidenote> That is, is there's one thing they should be very good at, that is verbal intelligence. Yeah, i know [this meme][wordcels vs shape rotators] of "shape rotators vs. wordcels" can be a bit cringy, but i honestly find these terms ironically endearing.</span> Well, it doesn't seem so.
