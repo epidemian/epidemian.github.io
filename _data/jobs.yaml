@@ -1,6 +1,14 @@
+- role: Software Developer
+  org: <a href="https://traduality.com/">Traduality</a>
+  location: remote
+  time: May 2025 – present
+  description: |
+    Develop a quality assurance platform to measure and improve different AI models used for real-time voice translation.
+  buzzwords: [Go, AI, Azure]
+
 - role: Sabbatical
   org: Personal projects
-  time: Jun 2022 – present
+  time: Jun 2022 – May 2025
   description: |
     Took some time off professional software development[.](/assets/images/sabbatical.jpeg) Started writing on [my blog](/blog). Worked on other temporary part-time jobs, like teaching rock climbing at a local club, and driving and Uber. Also did some recreational programming on personal projects.
   buzzwords: [Rust, Ruby, Jekyll, Blue-collar work]
