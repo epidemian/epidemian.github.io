@@ -1,17 +1,16 @@
-- role: Software Developer
-  org: <a href="https://traduality.com/">Traduality</a>
+- role: Lead Front-end Engineer
+  org: <a href="https://navgar.com/">Navgar</a>
   location: remote
-  time: May 2025 – present
+  time: Aug 2025 – present
   description: |
-    Develop a quality assurance platform to measure and improve different AI models used for real-time voice translation.
-  buzzwords: [Go, Azure, Speech recognition, Speech synthesis]
-
+    Develop a workflow management system.
+  buzzwords: [TypeScript, React, Material UI, Redux Toolkit, WebSockets, Ruby, Ruby on Rails]
 - role: Sabbatical
-  org: Personal projects
-  time: Jun 2022 – May 2025
+  org: personal projects
+  time: Jun 2022 – Jul 2025
   description: |
-    Took some time off professional software development[.](/assets/images/sabbatical.jpeg) Started writing on [my blog](/blog). Worked on other temporary part-time jobs, like teaching rock climbing at a local club, and driving and Uber. Also did some recreational programming on personal projects.
-  buzzwords: [Rust, Ruby, Jekyll, Blue-collar work]
+    Took some time off professional software development[.](/assets/images/sabbatical.jpeg) Started writing on [my blog](/blog). Worked on other temporary part-time jobs, like teaching rock climbing at a local club, driving an Uber, and doing some contractor Go backend development for a speech-to-speech translation startup. Also did some recreational programming on personal projects.
+  buzzwords: [Rust, Ruby, Go, Jekyll, Blue-collar work]
 - role: Senior Front-end Engineer
   org: <a href="https://www.toptal.com/">Toptal</a>
   location: remote
