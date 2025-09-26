@@ -65,4 +65,4 @@ Taught intermediate programming concepts on the "Algoritmos y Programción II" c
 
 ---
 
-**Last update:** September 2024
+**Last update:** August 2025
